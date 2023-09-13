@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D3AFC762AB15993003AE049 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7D3AFC752AB15933003AE049 /* .swiftlint.yml */; };
 		7DF11C272AB03D8E005C0AE3 /* AhnNyeongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF11C262AB03D8E005C0AE3 /* AhnNyeongApp.swift */; };
 		7DF11C292AB03D8E005C0AE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF11C282AB03D8E005C0AE3 /* ContentView.swift */; };
 		7DF11C2B2AB03D8F005C0AE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7D3AFC752AB15933003AE049 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		7DF11C232AB03D8E005C0AE3 /* AhnNyeong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AhnNyeong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF11C262AB03D8E005C0AE3 /* AhnNyeongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AhnNyeongApp.swift; sourceTree = "<group>"; };
 		7DF11C282AB03D8E005C0AE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +37,7 @@
 		7DF11C1A2AB03D8E005C0AE3 = {
 			isa = PBXGroup;
 			children = (
+				7D3AFC752AB15933003AE049 /* .swiftlint.yml */,
 				7DF11C252AB03D8E005C0AE3 /* AhnNyeong */,
 				7DF11C242AB03D8E005C0AE3 /* Products */,
 			);
@@ -77,6 +80,7 @@
 				7DF11C1F2AB03D8E005C0AE3 /* Sources */,
 				7DF11C202AB03D8E005C0AE3 /* Frameworks */,
 				7DF11C212AB03D8E005C0AE3 /* Resources */,
+				7D3AFC222AB04E19003AE049 /* Swift Script */,
 			);
 			buildRules = (
 			);
@@ -109,6 +113,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = 7DF11C1A2AB03D8E005C0AE3;
 			productRefGroup = 7DF11C242AB03D8E005C0AE3 /* Products */;
@@ -125,12 +130,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3AFC762AB15993003AE049 /* .swiftlint.yml in Resources */,
 				7DF11C2E2AB03D8F005C0AE3 /* Preview Assets.xcassets in Resources */,
 				7DF11C2B2AB03D8F005C0AE3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7D3AFC222AB04E19003AE049 /* Swift Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7DF11C1F2AB03D8E005C0AE3 /* Sources */ = {
