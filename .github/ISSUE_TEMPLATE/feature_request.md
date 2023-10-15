@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: 개발하려는 기능은 이런 거예요
+about: 이런 기능을 개발합니다
 title: "[feat] "
 labels: ''
 assignees: ''
