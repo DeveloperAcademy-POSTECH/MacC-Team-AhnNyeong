@@ -1,7 +1,7 @@
 ---
 name: Issue Template
 about: Description, Todo, ETC
-title: ''
+title: '[feat] '
 labels: ''
 assignees: ''
 
