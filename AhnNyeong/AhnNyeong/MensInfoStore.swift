@@ -47,7 +47,7 @@ class MensInfoStore: ObservableObject {
                     let mensInfo = try self.decoder.decode(MensInfo.self, from: mensInfoData)
                     var index = 0
                     for mensInfoItem in self.mensInfos {
-                        if (mensInfo.id == mensInfoItem.id){
+                        if (mensInfo.id == mensInfoItem.id) {
                             break
                         } else {
                             index += 1
@@ -82,6 +82,7 @@ class MensInfoStore: ObservableObject {
     }
     func addNewMensInfo(mensInfo: MensInfo) {
         self.ref?.child("mensInfos").child("\(mensInfo.id)").setValue([
+            "id": mensInfo.id,
             "imperID": mensInfo.imperID,
             "mensAmt": mensInfo.mensAmt,
             "mensSymp": mensInfo.mensSymp,
@@ -94,6 +95,7 @@ class MensInfoStore: ObservableObject {
     }
     func editMensInfo(mensInfo: MensInfo) {
         let updates: [String: Any] = [
+            "id": mensInfo.id,
             "imperID": mensInfo.imperID,
             "mensAmt": mensInfo.mensAmt,
             "mensSymp": mensInfo.mensSymp,
