@@ -8,15 +8,29 @@
 import SwiftUI
 
 struct ImperMainView: View {
+    @StateObject var mensInfoStore: MensInfoStore = MensInfoStore()
     @State var isClicked = false
     var body: some View {
-        Button(action: {
-            isClicked.toggle()
-        }, label: {
-            Circle()
-        })
-        if isClicked {
-            ImperMensView(mensInfoStore: MensInfoStore())
+        VStack {
+            List {
+                ForEach(mensInfoStore.mensInfos, id: \.self) { mensInfo in
+                    ListCell(mensInfo: mensInfo, mensInfoStore: mensInfoStore)
+                }
+            }
+            .onAppear {
+                mensInfoStore.listenToRealtimeDatabase()
+            }
+            .onDisappear {
+                mensInfoStore.stopListening()
+            }
+            Button(action: {
+                isClicked.toggle()
+            }, label: {
+                Circle()
+            })
+            if isClicked {
+                ImperMensView(mensInfoStore: MensInfoStore())
+            }
         }
     }
 }
@@ -74,6 +88,26 @@ struct ImperMensView: View {
             }, label: {
                 Text("저장하기")
             })
+        }
+    }
+}
+
+struct ListCell: View {
+    @State var mensInfo: MensInfo
+    var mensInfoStore: MensInfoStore
+    var body: some View {
+        HStack {
+            VStack {
+                Text(mensInfo.mensAmt)
+                Text(mensInfo.mensSymp)
+                Text(mensInfo.emoLv)
+                Text(mensInfo.regDe)
+            }
+            NavigationLink {
+                EditView(mensInfoStore: mensInfoStore, selectedMensInfo: $mensInfo)
+            } label: {
+                Text("수정하기")
+            }
         }
     }
 }
