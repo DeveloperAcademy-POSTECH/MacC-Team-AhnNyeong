@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct EditView: View {
-    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @ObservedObject var mensInfoStore: MensInfoStore
-    @Binding var selectedMensInfo: MensInfo
     var body: some View {
         VStack {
             VStack(alignment: HorizontalAlignment.leading) {
