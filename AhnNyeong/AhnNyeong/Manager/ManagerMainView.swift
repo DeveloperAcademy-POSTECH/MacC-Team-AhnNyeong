@@ -27,6 +27,7 @@ struct ManagerMainView : View {
         }
     }
     .font(.headline)
+    .tint(.pink)
   }
 }
 #Preview {
