@@ -40,10 +40,8 @@ struct ImperView: View {
                             .font(.title2)
                         Spacer()
                     }
-                    .border(.blue)
                     Text("생리통")
                         .font(.largeTitle)
-                        .border(.blue)
                     HStack {
                         ForEach(0..<3) { index in
                             Button(action: {
@@ -60,10 +58,8 @@ struct ImperView: View {
                             })
                         }
                     }
-                    .border(.blue)
                     Text("생리양")
                         .font(.largeTitle)
-                        .border(.blue)
                     HStack {
                         ForEach(0..<3) { index in
                             Button(action: {
@@ -79,10 +75,8 @@ struct ImperView: View {
                             })
                         }
                     }
-                    .border(.blue)
                     Text("감정상태")
                         .font(.largeTitle)
-                        .border(.blue)
                     HStack {
                         ForEach(0..<3) { index in
                             Button(action: {
@@ -98,7 +92,6 @@ struct ImperView: View {
                             })
                         }
                     }
-                    .border(.blue)
                     Button(action: {
                         mensInfoStore.addNewMensInfo(
                             mensInfo: MensInfo(id: UUID().uuidString, imperID: "abc123"
@@ -115,7 +108,6 @@ struct ImperView: View {
                             }
                     })
                     .padding()
-                    .border(.blue)
                 }
             }
         }
