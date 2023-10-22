@@ -19,11 +19,9 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             if selectedUserType == .imper {
-                ImperMainView()
+                ImperView()
             } else if selectedUserType == .mng {
-
                 ManagerViewForMVP(selectedUserType: $selectedUserType)
-
             } else {
                 LoginTypeView(selectedUserType: $selectedUserType)
             }

@@ -84,7 +84,6 @@ struct ManagerListView: View {
             }
     }
 }
-
 //#Preview {
 //    ManagerViewForMVP()
 //}

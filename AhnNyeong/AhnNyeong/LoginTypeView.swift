@@ -42,7 +42,7 @@ struct LoginTypeView: View {
                     .padding(.bottom, 19.58)
                 }
                 
-                NavigationLink(destination: ImperMainView()) {
+                NavigationLink(destination: ImperView()) {
                     Button {
                         selectedUserType = .imper
                     } label: {
