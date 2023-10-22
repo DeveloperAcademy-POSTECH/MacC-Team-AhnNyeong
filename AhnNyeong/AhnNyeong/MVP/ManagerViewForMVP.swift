@@ -15,7 +15,7 @@ struct ManagerViewForMVP: View {
     var body: some View {
         VStack {
             HStack(spacing: 100){
-                Text("\(currentDate, style: .date)")
+                Text("김머쪄 님의 생리 정보")
                     .font(.title)
                     .fontWeight(.semibold)
                 NavigationLink(destination: LoginTypeView(selectedUserType: $selectedUserType), label: {
@@ -30,8 +30,8 @@ struct ManagerViewForMVP: View {
                 })
             }
             ScrollView(showsIndicators: false) {
-                ForEach(mensInfoStore.mensInfos, id: \.self) { item in
-                    ManagerListView(item: item, mensInfoStore: mensInfoStore)
+                ForEach(mensInfoStore.mensInfos, id: \.self) { mensInfo in
+                    ManagerListView(mensInfo: mensInfo, mensInfoStore: mensInfoStore)
                 }
             }
             .onAppear {
@@ -42,49 +42,56 @@ struct ManagerViewForMVP: View {
             }
 
         }
-        .padding(.top, 20)
+        .padding(.top, 10)
     }
 }
 
 struct ManagerListView: View {
-    @State var item: MensInfo
+    @State var mensInfo: MensInfo
     var mensInfoStore: MensInfoStore
-    
     var body: some View {
-        Rectangle()
-            .frame(width: 362, height: 120)
-            .foregroundColor(.gray)
-            .cornerRadius(20)
-            .overlay {
-                HStack {
-                    Circle()
-                        .foregroundColor(.white)
-                        .frame(width: 100, height: 100)
-                        .overlay(
-                            Text("생리통 \n\(item.mensSymp)")
-                            .font(.headline)
-                            .multilineTextAlignment(.center)
-                            
-                        )
-                    Circle()
-                        .foregroundColor(.white)
-                        .frame(width: 100, height: 100)
-                        .overlay(Text("생리양 \n\(item.mensAmt)")
-                            .font(.headline)
-                            .multilineTextAlignment(.center)
-                        )
-                    Circle()
-                        .foregroundColor(.white)
-                        .frame(width: 100, height: 100)
-                        .overlay(Text("감정 \n\(item.emoLv)")
-                            .font(.headline)
-                            .multilineTextAlignment(.center)
-                        )
+        VStack(alignment: .leading, spacing: 5) {
+            Text(mensInfo.regDe)
+                .font(.title3)
+                .fontWeight(.semibold)
+            Rectangle()
+                .frame(width: 362, height: 120)
+                .foregroundColor(.teal)
+                .cornerRadius(20)
+                .overlay {
+                    HStack {
+                        Circle()
+                            .foregroundColor(.white)
+                            .frame(width: 100, height: 100)
+                            .overlay(
+                                Text("생리통 \n\(mensInfo.mensSymp)")
+                                    .font(.headline)
+                                    .multilineTextAlignment(.center)
+                            )
+                        Circle()
+                            .foregroundColor(.white)
+                            .frame(width: 100, height: 100)
+                            .overlay(Text("생리양 \n\(mensInfo.mensAmt)")
+                                .font(.headline)
+                                .multilineTextAlignment(.center)
+                            )
+                        Circle()
+                            .foregroundColor(.white)
+                            .frame(width: 100, height: 100)
+                            .overlay(Text("감정 \n\(mensInfo.emoLv)")
+                                .font(.headline)
+                                .multilineTextAlignment(.center)
+                            )
+                    }
                 }
-            }
+        }.padding()
+
     }
 }
 //#Preview {
 //    ManagerViewForMVP()
 //}
 
+#Preview {
+    ManagerViewForMVP()
+}
