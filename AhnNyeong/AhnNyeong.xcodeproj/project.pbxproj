@@ -51,6 +51,7 @@
 		7DF11C292AB03D8E005C0AE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF11C282AB03D8E005C0AE3 /* ContentView.swift */; };
 		7DF11C2B2AB03D8F005C0AE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */; };
 		7DF11C2E2AB03D8F005C0AE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF11C2D2AB03D8F005C0AE3 /* Preview Assets.xcassets */; };
+		DEEBFF012AE4FD8D005098E3 /* ManagerViewForMVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEBFF002AE4FD8D005098E3 /* ManagerViewForMVP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		7DF11C282AB03D8E005C0AE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DF11C2D2AB03D8F005C0AE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DEEBFF002AE4FD8D005098E3 /* ManagerViewForMVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewForMVP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,8 @@
 		7D0A95202ADC2D0600F6836D /* imper */ = {
 			isa = PBXGroup;
 			children = (
+				7D5376002ADD7C4E00D338D5 /* MensInfoStore.swift */,
+				7D5375FE2ADD63DF00D338D5 /* MensInfo.swift */,
 				7D0A95212ADC30B500F6836D /* ImperMainView.swift */,
 				7D5376062AE0166200D338D5 /* EditView.swift */,
 			);
@@ -124,6 +128,7 @@
 		7D2F48C92AE4F70100D8FAC8 /* MVP */ = {
 			isa = PBXGroup;
 			children = (
+				DEEBFF002AE4FD8D005098E3 /* ManagerViewForMVP.swift */,
 				7D2F48CA2AE4F71400D8FAC8 /* ImperView.swift */,
 			);
 			path = MVP;
@@ -156,8 +161,6 @@
 				7DF11C282AB03D8E005C0AE3 /* ContentView.swift */,
 				7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */,
 				7DF11C2C2AB03D8F005C0AE3 /* Preview Content */,
-				7D5375FE2ADD63DF00D338D5 /* MensInfo.swift */,
-				7D5376002ADD7C4E00D338D5 /* MensInfoStore.swift */,
 			);
 			path = AhnNyeong;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D5375FF2ADD63DF00D338D5 /* MensInfo.swift in Sources */,
+				DEEBFF012AE4FD8D005098E3 /* ManagerViewForMVP.swift in Sources */,
 				7DF11C292AB03D8E005C0AE3 /* ContentView.swift in Sources */,
 				7D5376072AE0166200D338D5 /* EditView.swift in Sources */,
 				7DF11C272AB03D8E005C0AE3 /* AhnNyeongApp.swift in Sources */,
