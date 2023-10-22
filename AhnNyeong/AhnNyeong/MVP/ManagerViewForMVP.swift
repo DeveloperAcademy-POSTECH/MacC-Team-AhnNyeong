@@ -9,40 +9,80 @@ import SwiftUI
 
 struct ManagerViewForMVP: View {
     let currentDate = Date()
-    let circleTexts = ["1", "2", "3"]
+    @StateObject var mensInfoStore: MensInfoStore = MensInfoStore()
+    @State var isClicked = false
     var body: some View {
-        ForEach(0..<6, id: \.self){ _ in
-            Spacer()
-        }
-        VStack(alignment: .leading, content: {
-            Text("\(currentDate, style: .date)")
-                .font(.title)
-                .fontWeight(.semibold)
-//            ForEach(mensInfoStore.mensInfos, id: \.self) { mensInfo in
-                ScrollView(showsIndicators: false) {
-                    VStack(alignment: .leading) {
-                        Spacer()
-                        Rectangle()
-                            .frame(width: 362, height: 120)
-                            .foregroundColor(.gray)
-                            .cornerRadius(20)
-                            .overlay {
-                                HStack {
-                                    ForEach(0..<3, id: \.self) { index in
-                                        Circle()
-                                            .foregroundColor(.white)
-                                            .frame(width: 100, height: 100)
-                                            .overlay(Text(circleTexts[index]))
-                                    }
-                                }
-                            }
-                    }
-//                }
+        VStack {
+            HStack(spacing: 100){
+                Text("\(currentDate, style: .date)")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                Button(action: {
+                    isClicked.toggle()
+                }, label: {
+                    Image(systemName: "arrow.clockwise")
+                        .resizable()
+                        .frame(width:30,height:30)
+                        .foregroundColor(.pink)
+                })
             }
-        })
+            ScrollView(showsIndicators: false) {
+                ForEach(mensInfoStore.mensInfos, id: \.self) { item in
+                    ManagerListView(item: item, mensInfoStore: mensInfoStore)
+                }
+            }
+            .onAppear {
+                mensInfoStore.listenToRealtimeDatabase()
+            }
+            .onDisappear {
+                mensInfoStore.stopListening()
+            }
+
+        }
+        .padding(.top, 20)
+    }
+}
+
+struct ManagerListView: View {
+    @State var item: MensInfo
+    var mensInfoStore: MensInfoStore
+    
+    var body: some View {
+        Rectangle()
+            .frame(width: 362, height: 120)
+            .foregroundColor(.gray)
+            .cornerRadius(20)
+            .overlay {
+                HStack {
+                    Circle()
+                        .foregroundColor(.white)
+                        .frame(width: 100, height: 100)
+                        .overlay(
+                            Text("생리통 \n\(item.mensSymp)")
+                            .font(.headline)
+                            .multilineTextAlignment(.center)
+                            
+                        )
+                    Circle()
+                        .foregroundColor(.white)
+                        .frame(width: 100, height: 100)
+                        .overlay(Text("생리양 \n\(item.mensAmt)")
+                            .font(.headline)
+                            .multilineTextAlignment(.center)
+                        )
+                    Circle()
+                        .foregroundColor(.white)
+                        .frame(width: 100, height: 100)
+                        .overlay(Text("감정 \n\(item.emoLv)")
+                            .font(.headline)
+                            .multilineTextAlignment(.center)
+                        )
+                }
+            }
     }
 }
 
 #Preview {
     ManagerViewForMVP()
 }
+
