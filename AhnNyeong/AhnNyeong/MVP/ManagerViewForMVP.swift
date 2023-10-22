@@ -19,10 +19,11 @@ struct ManagerViewForMVP: View {
                     .fontWeight(.semibold)
                 Button(action: {
                     isClicked.toggle()
+                    mensInfoStore.listenToRealtimeDatabase() 
                 }, label: {
                     Image(systemName: "arrow.clockwise")
                         .resizable()
-                        .frame(width:30,height:30)
+                        .frame(width:30, height: 30)
                         .foregroundColor(.pink)
                 })
             }
