@@ -24,11 +24,7 @@ struct LoginTypeView: View {
                 .padding(.bottom, 36.53)
 
             VStack {
-                NavigationLink(destination: EmptyView() // sample
-                    .onAppear {
-                        print("manager")
-                        selectedUserType = .notyet
-                    }) {  // sample
+                NavigationLink(destination:ManagerViewForMVP(selectedUserType: $selectedUserType)) {
                     Button {
                         selectedUserType = .mng
                     } label: {
