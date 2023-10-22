@@ -24,11 +24,7 @@ struct LoginTypeView: View {
                 .padding(.bottom, 36.53)
 
             VStack {
-                NavigationLink(destination: EmptyView() // sample
-                    .onAppear {
-                        print("manager")
-                        selectedUserType = .notyet
-                    }) {  // sample
+                NavigationLink(destination:ManagerViewForMVP()) {
                     Button {
                         selectedUserType = .mng
                     } label: {
@@ -46,7 +42,7 @@ struct LoginTypeView: View {
                     .padding(.bottom, 19.58)
                 }
                 
-                NavigationLink(destination: ImperMainView()) {
+                NavigationLink(destination: ImperView()) {
                     Button {
                         selectedUserType = .imper
                     } label: {
