@@ -30,7 +30,6 @@ class MensInfoStore: ObservableObject {
                     let mensInfoData = try JSONSerialization.data(withJSONObject: json)
                     let mensInfo = try self.decoder.decode(MensInfo.self, from: mensInfoData)
                     self.mensInfos.append(mensInfo)
-                    self.mensInfos.reverse()
                 } catch {
                     print("an error occurred", error)
                 }
@@ -55,7 +54,6 @@ class MensInfoStore: ObservableObject {
                         }
                     }
                     self.mensInfos[index] = mensInfo
-                    self.mensInfos.reverse()
                 } catch {
                     print("an error occurred", error)
                 }

@@ -14,7 +14,7 @@ struct ManagerViewForMVP: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(mensInfoStore.mensInfos, id: \.self) { mensInfo in
+                ForEach(mensInfoStore.mensInfos.reversed(), id: \.self) { mensInfo in
                     ManagerListView(mensInfo: mensInfo, mensInfoStore: mensInfoStore)
                 }
             }
@@ -26,15 +26,14 @@ struct ManagerViewForMVP: View {
                 mensInfoStore.stopListening()
             }
         }
-        .navigationBarTitle("김생리님의 생리 정보")
+        .navigationBarTitle("김머쪄님의 생리 정보")
         .navigationBarItems(leading:
             Button(action: {
                 // 뒤로 돌아가게
                 selectedUserType = .notyet
-            }) {
+            }, label: {
                 Image(systemName: "chevron.left")
-                    .foregroundColor(.pink)
-            })
+            }))
     }
 }
 
@@ -42,7 +41,7 @@ struct ManagerListView: View {
     @State var mensInfo: MensInfo
     var mensInfoStore: MensInfoStore
     var body: some View {
-        Section(mensInfo.regDe){
+        Section(mensInfo.regDe) {
             HStack {
                 Text("생리통")
                 Spacer()

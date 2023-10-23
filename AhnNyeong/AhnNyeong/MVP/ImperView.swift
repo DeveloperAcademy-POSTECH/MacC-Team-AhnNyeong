@@ -19,37 +19,27 @@ struct ImperView: View {
     let emoLv = ["보통", "좋음", "나쁨"]
     let dateformat: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "YYYY년 M월 d일"
+        formatter.dateFormat = "YYYY년 M월 d일 HH:mm:ss"
         return formatter
     }()
     var body: some View {
-        VStack {
-            HStack {
-                Text(dateformat.string(from: Date()))
-                    .padding()
-                    .font(.title2)
-                Spacer()
-                NavigationLink(destination: LoginTypeView(selectedUserType: $selectedUserType), label: {
-                    Button(action: {
-                        selectedUserType = .notyet
-                    }, label: {
-                        Image(systemName: "arrow.uturn.backward")
-                            .resizable()
-                            .frame(width:24, height: 24)
-                            .foregroundColor(.pink)
-                    })
+        NavigationStack {
+            VStack {
+                Button(action: {
+                    isHaveMens.toggle()
+                }, label: {
+                    Capsule()
+                        .foregroundColor(isHaveMens ? .pink : .white)
+                        .frame(width: 150, height: 80)
+                        .shadow(radius: 4, x: 2, y: 2)
+                        .overlay(
+                            Image(systemName: "drop.fill")
+                                .font(.system(size: 50, weight: .bold, design: .default))
+                                .foregroundColor(isHaveMens ? .white : .pink)
+                        )
                 })
-            }
-            .padding(.trailing, 16)
-            Button(action: {
-                isHaveMens.toggle()
-            }, label: {
-                Image(systemName: "drop.circle.fill")
-                    .resizable()
-                    .frame(width: 120, height: 120)
-            })
-            
-            if isHaveMens {
+                .padding(20)
+                if isHaveMens {
                     HStack {
                         ForEach(0..<3) { index in
                             Button(action: {
@@ -57,10 +47,10 @@ struct ImperView: View {
                             }, label: {
                                 if self.mensSympSelected == index {
                                     Image("mensSymp\(index+1)")
-                                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                                        .frame(width: 100, height: 100)
                                 } else {
                                     Image("mensSymp\(index+1)_un")
-                                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                                        .frame(width: 100, height: 100)
                                 }
                             })
                         }
@@ -73,10 +63,10 @@ struct ImperView: View {
                             }, label: {
                                 if self.mensAmtSelected == index {
                                     Image("mensAmt\(index+1)")
-                                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                                        .frame(width: 100, height: 100)
                                 } else {
                                     Image("mensAmt\(index+1)_un")
-                                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                                        .frame(width: 100, height: 100)
                                 }
                             })
                         }
@@ -89,34 +79,43 @@ struct ImperView: View {
                             }, label: {
                                 if self.emoLvSelected == index {
                                     Image("emoLv\(index+1)")
-                                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                                        .frame(width: 100, height: 100)
                                 } else {
                                     Image("emoLv\(index+1)_un")
-                                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                                        .frame(width: 100, height: 100)
                                 }
                             })
                         }
                     }
                     .padding()
+                    Spacer()
                     Button(action: {
                         mensInfoStore.addNewMensInfo(
-                            mensInfo: MensInfo(id: UUID().uuidString, imperID: "abc123"
-                                               , mensAmt: mensAmt[mensAmtSelected], mensSymp: mensSymp[mensSympSelected], emoLv: emoLv[emoLvSelected], regDe: dateformat.string(from: Date())))
+                            mensInfo: MensInfo(id: UUID().uuidString, imperID: "abc123", mensAmt: mensAmt[mensAmtSelected],
+                                               mensSymp: mensSymp[mensSympSelected], emoLv: emoLv[emoLvSelected], regDe: dateformat.string(from: Date())))
                     }, label: {
                         Rectangle()
                             .cornerRadius(15)
-                            .foregroundColor(.secondary)
                             .frame(height: 60)
+                            .shadow(radius: 4)
                             .overlay {
                                 Text("저장하기")
                                     .font(.headline)
-                                    .foregroundColor(.black)
+                                    .foregroundColor(.white)
                             }
                     })
                     .padding()
                 }
+            }
+            Spacer()
         }
-        Spacer()
+        .navigationBarTitle("\(Date(), style: .date)")
+        .navigationBarItems(leading:
+            Button(action: {
+                selectedUserType = .notyet
+            }, label: {
+                Image(systemName: "chevron.left")
+            }))
     }
 }
 
