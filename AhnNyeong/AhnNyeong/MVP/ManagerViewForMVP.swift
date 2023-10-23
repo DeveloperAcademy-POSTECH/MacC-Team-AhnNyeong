@@ -91,7 +91,3 @@ struct ManagerListView: View {
 //#Preview {
 //    ManagerViewForMVP()
 //}
-
-#Preview {
-    ManagerViewForMVP()
-}

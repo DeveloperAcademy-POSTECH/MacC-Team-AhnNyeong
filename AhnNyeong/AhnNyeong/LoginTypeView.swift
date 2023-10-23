@@ -59,15 +59,17 @@ struct LoginTypeView: View {
                     .font(.title)
                 }
             }
-            .padding(.bottom, 291.91)
+            
+            Spacer()
             
             Text("본 화면은 사용성 테스트를 위해 제작되었습니다. ")
                 .font(.caption)
                 .foregroundColor(.gray)
                 .frame(width: 330)
-            
         }
         .padding(.horizontal, 30)
+        .padding(.top, 30)
+        .padding(.bottom, 25)
     }
 }
 
