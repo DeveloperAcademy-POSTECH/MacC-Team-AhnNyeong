@@ -40,7 +40,6 @@ struct ManagerViewForMVP: View {
             .onDisappear {
                 mensInfoStore.stopListening()
             }
-
         }
         .padding(.top, 10)
     }

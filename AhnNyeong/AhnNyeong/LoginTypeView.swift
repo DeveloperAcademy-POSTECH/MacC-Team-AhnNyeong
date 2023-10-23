@@ -13,13 +13,13 @@ struct LoginTypeView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("마이 모미")
-                .font(.headline)
+                .font(.largeTitle)
                 .padding(.bottom, 46.19)
             Text("사용 시작하기")
-                .font(.subheadline)
+                .font(.title2)
                 .padding(.bottom, 11.65)
-            Text("우리가 지정해준 역할로 접속하면 되고 어쩌고 잉")
-                .font(.caption)
+            Text("대상자로 접속하면 생리 증상을 입력할 수 있습니다.\n관리자로 접속하면 대상자가 입력한 생리 증상을 조회할 수 있습니다.")
+                .font(.caption2)
                 .foregroundColor(.gray)
                 .padding(.bottom, 36.53)
 
@@ -42,7 +42,7 @@ struct LoginTypeView: View {
                     .padding(.bottom, 19.58)
                 }
                 
-                NavigationLink(destination: ImperView()) {
+                NavigationLink(destination: ImperView(selectedUserType: $selectedUserType)) {
                     Button {
                         selectedUserType = .imper
                     } label: {

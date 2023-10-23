@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ImperView: View {
+    @Binding var selectedUserType: ContentView.LoginType
     @StateObject var mensInfoStore: MensInfoStore = MensInfoStore()
     @State var isHaveMens = false
     @State var mensSympSelected = 0
@@ -28,7 +29,18 @@ struct ImperView: View {
                     .padding()
                     .font(.title2)
                 Spacer()
+                NavigationLink(destination: LoginTypeView(selectedUserType: $selectedUserType), label: {
+                    Button(action: {
+                        selectedUserType = .notyet
+                    }, label: {
+                        Image(systemName: "arrow.uturn.backward")
+                            .resizable()
+                            .frame(width:24, height: 24)
+                            .foregroundColor(.pink)
+                    })
+                })
             }
+            .padding(.trailing, 16)
             Button(action: {
                 isHaveMens.toggle()
             }, label: {
@@ -108,6 +120,6 @@ struct ImperView: View {
     }
 }
 
-#Preview {
-    ImperView()
-}
+//#Preview {
+//    ImperView()
+//}
