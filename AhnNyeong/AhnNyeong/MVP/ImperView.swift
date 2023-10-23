@@ -29,16 +29,16 @@ struct ImperView: View {
                     isHaveMens.toggle()
                 }, label: {
                     Capsule()
-                        .foregroundColor(.white)
+                        .foregroundColor(isHaveMens ? .pink : .white)
                         .frame(width: 150, height: 80)
                         .shadow(radius: 4, x: 2, y: 2)
                         .overlay(
                             Image(systemName: "drop.fill")
                                 .font(.system(size: 50, weight: .bold, design: .default))
-                                .foregroundColor(.pink)
+                                .foregroundColor(isHaveMens ? .white : .pink)
                         )
                 })
-                .padding(.top, 20)
+                .padding(20)
                 if isHaveMens {
                     HStack {
                         ForEach(0..<3) { index in
