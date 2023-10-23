@@ -8,13 +8,27 @@
 import SwiftUI
 
 struct ManagerViewForMVP: View {
+    @Binding var selectedUserType: ContentView.LoginType
+    let currentDate = Date()
     @StateObject var mensInfoStore: MensInfoStore = MensInfoStore()
     @State var isClicked = false
     var body: some View {
         VStack {
-            Text("김머쪄 님의 생리 정보")
-                .font(.title)
-                .fontWeight(.semibold)
+            HStack(spacing: 100){
+                Text("김머쪄 님의 생리 정보")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                NavigationLink(destination: LoginTypeView(selectedUserType: $selectedUserType), label: {
+                    Button(action: {
+                        selectedUserType = .notyet
+                    }, label: {
+                        Image(systemName: "arrow.uturn.backward")
+                            .resizable()
+                            .frame(width:30, height: 30)
+                            .foregroundColor(.pink)
+                    })
+                })
+            }
             ScrollView(showsIndicators: false) {
                 ForEach(mensInfoStore.mensInfos, id: \.self) { mensInfo in
                     ManagerListView(mensInfo: mensInfo, mensInfoStore: mensInfoStore)
@@ -74,7 +88,6 @@ struct ManagerListView: View {
 
     }
 }
-
-#Preview {
-    ManagerViewForMVP()
-}
+//#Preview {
+//    ManagerViewForMVP()
+//}

@@ -21,7 +21,7 @@ struct ContentView: View {
             if selectedUserType == .imper {
                 ImperView()
             } else if selectedUserType == .mng {
-                ManagerViewForMVP()
+                ManagerViewForMVP(selectedUserType: $selectedUserType)
             } else {
                 LoginTypeView(selectedUserType: $selectedUserType)
             }
