@@ -15,7 +15,7 @@ class MensInfoStore: ObservableObject {
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
     func listenToRealtimeDatabase() {
-        guard let databasePath = ref?.child("mensInfos") else {
+        guard let databasePath = ref?.child("mensInfos").queryOrdered(byChild: "regDe") else {
             return
         }
         databasePath
@@ -30,6 +30,7 @@ class MensInfoStore: ObservableObject {
                     let mensInfoData = try JSONSerialization.data(withJSONObject: json)
                     let mensInfo = try self.decoder.decode(MensInfo.self, from: mensInfoData)
                     self.mensInfos.append(mensInfo)
+                    self.mensInfos.reverse()
                 } catch {
                     print("an error occurred", error)
                 }
@@ -54,6 +55,7 @@ class MensInfoStore: ObservableObject {
                         }
                     }
                     self.mensInfos[index] = mensInfo
+                    self.mensInfos.reverse()
                 } catch {
                     print("an error occurred", error)
                 }
