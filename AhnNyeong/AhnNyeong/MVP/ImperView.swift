@@ -22,8 +22,13 @@ struct ImperView: View {
         return formatter
     }()
     var body: some View {
-        
         VStack {
+            HStack {
+                Text(dateformat.string(from: Date()))
+                    .padding()
+                    .font(.title2)
+                Spacer()
+            }
             Button(action: {
                 isHaveMens.toggle()
             }, label: {
@@ -31,17 +36,8 @@ struct ImperView: View {
                     .resizable()
                     .frame(width: 120, height: 120)
             })
-            .padding()
+            
             if isHaveMens {
-                ScrollView {
-                    HStack {
-                        Text(dateformat.string(from: Date()))
-                            .padding()
-                            .font(.title2)
-                        Spacer()
-                    }
-                    Text("생리통")
-                        .font(.largeTitle)
                     HStack {
                         ForEach(0..<3) { index in
                             Button(action: {
@@ -54,12 +50,10 @@ struct ImperView: View {
                                     Image("mensSymp\(index+1)_un")
                                         .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
                                 }
-                                
                             })
                         }
                     }
-                    Text("생리양")
-                        .font(.largeTitle)
+                    .padding()
                     HStack {
                         ForEach(0..<3) { index in
                             Button(action: {
@@ -75,8 +69,7 @@ struct ImperView: View {
                             })
                         }
                     }
-                    Text("감정상태")
-                        .font(.largeTitle)
+                    .padding()
                     HStack {
                         ForEach(0..<3) { index in
                             Button(action: {
@@ -92,6 +85,7 @@ struct ImperView: View {
                             })
                         }
                     }
+                    .padding()
                     Button(action: {
                         mensInfoStore.addNewMensInfo(
                             mensInfo: MensInfo(id: UUID().uuidString, imperID: "abc123"
@@ -109,12 +103,10 @@ struct ImperView: View {
                     })
                     .padding()
                 }
-            }
         }
+        Spacer()
     }
 }
-
-
 
 #Preview {
     ImperView()
