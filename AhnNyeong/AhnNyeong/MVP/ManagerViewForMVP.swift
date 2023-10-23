@@ -14,7 +14,7 @@ struct ManagerViewForMVP: View {
     var body: some View {
         NavigationStack {
             List {
-                ForEach(mensInfoStore.mensInfos, id: \.self) { mensInfo in
+                ForEach(mensInfoStore.mensInfos.reversed(), id: \.self) { mensInfo in
                     ManagerListView(mensInfo: mensInfo, mensInfoStore: mensInfoStore)
                 }
             }
