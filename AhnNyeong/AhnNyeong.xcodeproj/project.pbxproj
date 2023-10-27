@@ -52,6 +52,7 @@
 		7DF11C2B2AB03D8F005C0AE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */; };
 		7DF11C2E2AB03D8F005C0AE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF11C2D2AB03D8F005C0AE3 /* Preview Assets.xcassets */; };
 		8E1DB0AE2AE4F522008DAD0F /* LoginTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DB0AD2AE4F522008DAD0F /* LoginTypeView.swift */; };
+		8E86F1642AEB461F00A04390 /* MngSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E86F1632AEB461F00A04390 /* MngSettingView.swift */; };
 		DEEBFF012AE4FD8D005098E3 /* ManagerViewForMVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEBFF002AE4FD8D005098E3 /* ManagerViewForMVP.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DF11C2D2AB03D8F005C0AE3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8E1DB0AD2AE4F522008DAD0F /* LoginTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTypeView.swift; sourceTree = "<group>"; };
+		8E86F1632AEB461F00A04390 /* MngSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MngSettingView.swift; sourceTree = "<group>"; };
 		DEEBFF002AE4FD8D005098E3 /* ManagerViewForMVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewForMVP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +166,7 @@
 				7DF11C282AB03D8E005C0AE3 /* ContentView.swift */,
 				7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */,
 				7DF11C2C2AB03D8F005C0AE3 /* Preview Content */,
+				8E86F1632AEB461F00A04390 /* MngSettingView.swift */,
 			);
 			path = AhnNyeong;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			files = (
 				7D5375FF2ADD63DF00D338D5 /* MensInfo.swift in Sources */,
 				DEEBFF012AE4FD8D005098E3 /* ManagerViewForMVP.swift in Sources */,
+				8E86F1642AEB461F00A04390 /* MngSettingView.swift in Sources */,
 				7DF11C292AB03D8E005C0AE3 /* ContentView.swift in Sources */,
 				7D5376072AE0166200D338D5 /* EditView.swift in Sources */,
 				7DF11C272AB03D8E005C0AE3 /* AhnNyeongApp.swift in Sources */,
