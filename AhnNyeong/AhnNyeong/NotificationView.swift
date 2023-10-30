@@ -23,7 +23,7 @@ struct NotificationView: View {
                                 Text("999+")
                                     .font(.system(size: 12))
                             )
-                            .offset(x:20, y:-10)
+                            .offset(x: 20, y: -10)
                     }
                 }
                 Spacer()
@@ -119,7 +119,7 @@ struct NotificationListView: View {
                             .frame(width: 32, height: 32)
                     }
                     .padding(14)
-                    HStack{
+                    HStack {
                         Spacer()
                         VStack {
                             Text("2분 전")
