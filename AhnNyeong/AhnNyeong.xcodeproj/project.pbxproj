@@ -47,6 +47,7 @@
 		7D5376392AE01D6C00D338D5 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5376382AE01D6C00D338D5 /* FirebaseRemoteConfigSwift */; };
 		7D53763B2AE01D6C00D338D5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7D53763A2AE01D6C00D338D5 /* FirebaseStorage */; };
 		7D53763D2AE01D6C00D338D5 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 7D53763C2AE01D6C00D338D5 /* FirebaseStorageCombine-Community */; };
+		7DC0538E2AF0C57E00DCE005 /* TargetMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DC0538D2AF0C57E00DCE005 /* TargetMainView.swift */; };
 		7DF11C272AB03D8E005C0AE3 /* AhnNyeongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF11C262AB03D8E005C0AE3 /* AhnNyeongApp.swift */; };
 		7DF11C292AB03D8E005C0AE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF11C282AB03D8E005C0AE3 /* ContentView.swift */; };
 		7DF11C2B2AB03D8F005C0AE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		7D5375FE2ADD63DF00D338D5 /* MensInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensInfo.swift; sourceTree = "<group>"; };
 		7D5376002ADD7C4E00D338D5 /* MensInfoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensInfoStore.swift; sourceTree = "<group>"; };
 		7D5376062AE0166200D338D5 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		7DC0538D2AF0C57E00DCE005 /* TargetMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetMainView.swift; sourceTree = "<group>"; };
 		7DF11C232AB03D8E005C0AE3 /* AhnNyeong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AhnNyeong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF11C262AB03D8E005C0AE3 /* AhnNyeongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AhnNyeongApp.swift; sourceTree = "<group>"; };
 		7DF11C282AB03D8E005C0AE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				7DF11C282AB03D8E005C0AE3 /* ContentView.swift */,
 				7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */,
 				7DF11C2C2AB03D8F005C0AE3 /* Preview Content */,
+				7DC0538D2AF0C57E00DCE005 /* TargetMainView.swift */,
 			);
 			path = AhnNyeong;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 			files = (
 				7D5375FF2ADD63DF00D338D5 /* MensInfo.swift in Sources */,
 				DEEBFF012AE4FD8D005098E3 /* ManagerViewForMVP.swift in Sources */,
+				7DC0538E2AF0C57E00DCE005 /* TargetMainView.swift in Sources */,
 				7DF11C292AB03D8E005C0AE3 /* ContentView.swift in Sources */,
 				7D5376072AE0166200D338D5 /* EditView.swift in Sources */,
 				7DF11C272AB03D8E005C0AE3 /* AhnNyeongApp.swift in Sources */,
