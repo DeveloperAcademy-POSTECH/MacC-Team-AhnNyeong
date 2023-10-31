@@ -34,8 +34,9 @@ struct TargetMainView: View {
                     Image(startDefaultBtnClick ? "startPressed" : "startDefault")
                         .padding(.top, 63)
                 })
-                Text("생리를 시작했나요?")
+                Text(startDefaultBtnClick ? "생리를 시작했어요!" : "생리를 시작했나요?")
                     .font(.system(size: 30, weight: .bold))
+                    .foregroundColor(startDefaultBtnClick ? Color(.coral500) : .black)
                     .padding(.top, 40)
                 Button(action: {
                     calendarBtnClick = true
@@ -49,12 +50,12 @@ struct TargetMainView: View {
                 .padding(.top, 40)
             }
             .padding(EdgeInsets(top: 30, leading: 16, bottom: 30, trailing: 16))
-            .navigationDestination(isPresented: $toSympView) {
-                SympView()
-            }
-            .navigationDestination(isPresented: $calendarBtnClick) {
-                CalView()
-            }
+//            .navigationDestination(isPresented: $toSympView) {
+//                SympView()
+//            }
+//            .navigationDestination(isPresented: $calendarBtnClick) {
+//                CalView()
+//            }
         }
     }
 }
