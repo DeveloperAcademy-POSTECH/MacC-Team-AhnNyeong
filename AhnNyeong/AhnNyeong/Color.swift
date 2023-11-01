@@ -32,4 +32,6 @@ extension Color {
     static let black300 = Color(.black300)
     static let black400 = Color(.black400)
     static let black500 = Color(.black500)
+    static let calWeekday = Color(.calWeekday)
+    static let calToday = Color(.calToday)
 }
