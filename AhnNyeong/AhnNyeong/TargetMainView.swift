@@ -14,15 +14,15 @@ struct TargetMainView: View {
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                VStack(alignment: .leading) {
-                    Text("안녕하세요!")
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("안녕하세요!")
                         .font(.system(size: 32, weight: .semibold))
-                    HStack(alignment: .firstTextBaseline) {
                         Text("이김생리님")
                             .font(.system(size: 32, weight: .heavy))
                         //MARK: - weight extraBold로 변경필요 -> Font extension 추후 적용
-                        Spacer()
                     }
+                    Spacer()
                 }
                 .padding(EdgeInsets(top: 20, leading: 10, bottom: 20, trailing: 10))
                 Button(action: {
