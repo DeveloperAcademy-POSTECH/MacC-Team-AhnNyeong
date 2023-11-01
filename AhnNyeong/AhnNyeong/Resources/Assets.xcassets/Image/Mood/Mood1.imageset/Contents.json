@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "mood_happy_1x.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
