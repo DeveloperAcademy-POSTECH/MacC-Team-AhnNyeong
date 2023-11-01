@@ -19,7 +19,7 @@ struct TargetMainView: View {
                         .font(.system(size: 32, weight: .semibold))
                     HStack(alignment: .firstTextBaseline) {
                         Text("이김생리님")
-                            .font(.system(size: 32, weight: .heavy)) 
+                            .font(.system(size: 32, weight: .heavy))
                         //MARK: - weight extraBold로 변경필요 -> Font extension 추후 적용
                         Spacer()
                     }
@@ -36,14 +36,14 @@ struct TargetMainView: View {
                 })
                 Text(startDefaultBtnClick ? "생리를 시작했어요!" : "생리를 시작했나요?")
                     .font(.system(size: 30, weight: .bold))
-                    .foregroundColor(startDefaultBtnClick ? Color(.coral500) : .black)
+                    .foregroundColor(startDefaultBtnClick ? .coral500 : .black)
                     .padding(.top, 40)
                 Button(action: {
                     calendarBtnClick = true
                 }, label: {
                     Text("\(Image(systemName: "calendar")) 달력 보기")
                         .font(.system(size: 22, weight: .bold))
-                        .foregroundColor(Color(.coral400))
+                        .foregroundColor(.coral400)
                         .padding(.init(top: 10, leading: 15, bottom: 10, trailing: 15))
                         .background(RoundedRectangle(cornerRadius: 10).fill(.white).shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.15), radius: 8, x: 0, y: 4))
                 })// MARK: - Button Extension 적용필요
