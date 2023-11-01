@@ -54,6 +54,7 @@
 		8E1DB0AE2AE4F522008DAD0F /* LoginTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DB0AD2AE4F522008DAD0F /* LoginTypeView.swift */; };
 		DE7697512AEB544400AE4FA9 /* ManagerTargetInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697502AEB544400AE4FA9 /* ManagerTargetInputView.swift */; };
 		DE7697532AEF244300AE4FA9 /* TargetMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697522AEF244300AE4FA9 /* TargetMainView.swift */; };
+		DE7697572AEF6C3400AE4FA9 /* ManagerMemoInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697562AEF6C3400AE4FA9 /* ManagerMemoInputView.swift */; };
 		DEEBFF012AE4FD8D005098E3 /* ManagerViewForMVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEBFF002AE4FD8D005098E3 /* ManagerViewForMVP.swift */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		8E1DB0AD2AE4F522008DAD0F /* LoginTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTypeView.swift; sourceTree = "<group>"; };
 		DE7697502AEB544400AE4FA9 /* ManagerTargetInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerTargetInputView.swift; sourceTree = "<group>"; };
 		DE7697522AEF244300AE4FA9 /* TargetMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetMainView.swift; sourceTree = "<group>"; };
+		DE7697562AEF6C3400AE4FA9 /* ManagerMemoInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerMemoInputView.swift; sourceTree = "<group>"; };
 		DEEBFF002AE4FD8D005098E3 /* ManagerViewForMVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewForMVP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,10 +168,11 @@
 				7DF11C262AB03D8E005C0AE3 /* AhnNyeongApp.swift */,
 				8E1DB0AD2AE4F522008DAD0F /* LoginTypeView.swift */,
 				7DF11C282AB03D8E005C0AE3 /* ContentView.swift */,
+				DE7697502AEB544400AE4FA9 /* ManagerTargetInputView.swift */,
+				DE7697562AEF6C3400AE4FA9 /* ManagerMemoInputView.swift */,
+				DE7697522AEF244300AE4FA9 /* TargetMainView.swift */,
 				7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */,
 				7DF11C2C2AB03D8F005C0AE3 /* Preview Content */,
-				DE7697502AEB544400AE4FA9 /* ManagerTargetInputView.swift */,
-				DE7697522AEF244300AE4FA9 /* TargetMainView.swift */,
 			);
 			path = AhnNyeong;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				DE7697512AEB544400AE4FA9 /* ManagerTargetInputView.swift in Sources */,
 				8E1DB0AE2AE4F522008DAD0F /* LoginTypeView.swift in Sources */,
 				7D2F48CB2AE4F71400D8FAC8 /* ImperView.swift in Sources */,
+				DE7697572AEF6C3400AE4FA9 /* ManagerMemoInputView.swift in Sources */,
 				DE7697532AEF244300AE4FA9 /* TargetMainView.swift in Sources */,
 				7D5376012ADD7C4E00D338D5 /* MensInfoStore.swift in Sources */,
 			);

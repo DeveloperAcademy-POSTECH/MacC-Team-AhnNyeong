@@ -15,9 +15,14 @@ struct PhoneNumberTextField: View {
             TextField("전화번호를 입력하세요", text: $phoneNumber)
                 .keyboardType(.numberPad)
                 .onChange(of: phoneNumber) { newValue in
-                    // 사용자가 입력한 번호 사이에 "-" 추가
-                    if newValue.count > 3 {
+                    // "-" 기호를 모두 제거
+                    phoneNumber = phoneNumber.replacingOccurrences(of: "-", with: "")
+                    // 사용자가 입력한 번호 사이에 자동으로 "-" 추가
+                    if phoneNumber.count > 3 && phoneNumber.count <= 8 {
                         phoneNumber.insert("-", at: phoneNumber.index(phoneNumber.startIndex, offsetBy: 3))
+                    } else if phoneNumber.count > 8 {
+                        phoneNumber.insert("-", at: phoneNumber.index(phoneNumber.startIndex, offsetBy: 3))
+                        phoneNumber.insert("-", at: phoneNumber.index(phoneNumber.startIndex, offsetBy: 8))
                     }
                 }
         }
@@ -29,6 +34,7 @@ struct ManagerTargetInputView: View {
     @State var phoneNumb: String = ""
     
     var body: some View {
+        //최상단에 navigationStack 들어가면 되겠다~ (원래는 chevron 있음)
         HStack {
             VStack(alignment: .leading, content: {
                 Text("대상자 연결하기")
@@ -55,7 +61,7 @@ struct ManagerTargetInputView: View {
                 .padding(.vertical,20)
             PhoneNumberTextField(phoneNumber: $phoneNumb)
                 .padding()
-                .overlay{
+                .overlay {
                     RoundedRectangle(cornerRadius: 15)
                         .stroke(Color.gray, lineWidth: 2)
                 }

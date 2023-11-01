@@ -21,10 +21,8 @@ struct TargetMainView: View {
             Text("나의 생리 기록")
                 .fontWeight(.semibold)
                 .font(.system(size:30))
-                
         }
         .padding(.trailing, 120)
-        
         RoundedRectangle(cornerSize: CGSize(width:20, height:20))
             .frame(width:339, height: 570)
             .foregroundColor(.gray)
