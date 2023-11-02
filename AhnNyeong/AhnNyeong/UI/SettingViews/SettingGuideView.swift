@@ -50,8 +50,7 @@ struct ModalButton: View {
                 .shadow(color: .black500.opacity(0.15), radius: 8, x: 0, y: 4)
                 .overlay {
                     Text(buttonTitle)
-                        .font(.system(size: 18, weight: .semibold))
-                        .foregroundColor(.white75)
+                        .semiBold18White75()
                 }
         })
     }

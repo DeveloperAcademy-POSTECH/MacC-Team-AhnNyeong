@@ -21,14 +21,12 @@ struct SettingNotiView: View {
             
             VStack(alignment: .leading, spacing: 0) {
                 Text("개별 알림 활성화")
-                    .font(.system(size: 18, weight: .bold))
-                    .foregroundColor(.black400)
+                    .bold18Black400()
                     .padding(.top, 20)
                 HStack(spacing: 0) {
                     Text("활성화된 알람은 ")
                     Text("오전 9시")
-                        .font(.system(size: 12, weight: .semibold))
-                        .foregroundColor(.coral500)
+                        .semiBold12Coral500()
                     Text("에 일괄 전송됩니다.")
                 }
                 .font(.system(size: 12, weight: .medium))
@@ -133,11 +131,9 @@ struct ListTitle: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(listTitle)
-                .font(.system(size: 18, weight: .bold))
-                .foregroundColor(.black400)
+                .bold18Black400()
             Text(listCaption)
-                .font(.system(size: 12, weight: .medium))
-                .foregroundColor(.black300)
+                .medium12Black300()
         }
     }
 }

@@ -115,7 +115,7 @@ struct SettingList: View {
                 ListTitle(listTitle: listTitle, listCaption: listCaption)
                 Spacer()
                 Image(systemName: "chevron.right")
-                    .font(.system(size: 20, weight: .bold))
+                    .font(.system(size: 17, weight: .bold))
                     .foregroundColor(.coral500)
             }
             .padding(.vertical, 20)
