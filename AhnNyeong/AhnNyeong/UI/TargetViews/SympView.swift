@@ -30,8 +30,13 @@ struct MensSympDetailView: View {
                             }
                         })
                         .frame(width: 90, height: 90)
-                        Text(imgTitle[index])
-                            .semiBold16Black400()
+                        if mensSympSelected == index {
+                            Text(imgTitle[index])
+                                .semiBold16Coral500()
+                        } else {
+                            Text(imgTitle[index])
+                                .semiBold16Black400()
+                        }
                     }
                     if index != 2 {
                         Spacer()
@@ -67,8 +72,13 @@ struct MensAmtDetailView: View {
                             }
                         })
                         .frame(width: 90, height: 90)
-                        Text(imgTitle[index])
-                            .semiBold16Black400()
+                        if mensAmtSelected == index {
+                            Text(imgTitle[index])
+                                .semiBold16Coral500()
+                        } else {
+                            Text(imgTitle[index])
+                                .semiBold16Black400()
+                        }
                     }
                     if index != 2 {
                         Spacer()
@@ -104,8 +114,13 @@ struct MoodDetailView: View {
                             }
                         })
                         .frame(width: 90, height: 90)
-                        Text(imgTitle[index])
-                            .semiBold16Black400()
+                        if emoLvSelected == index {
+                            Text(imgTitle[index])
+                                .semiBold16Coral500()
+                        } else {
+                            Text(imgTitle[index])
+                                .semiBold16Black400()
+                        }
                     }
                     if index != 2 {
                         Spacer()
