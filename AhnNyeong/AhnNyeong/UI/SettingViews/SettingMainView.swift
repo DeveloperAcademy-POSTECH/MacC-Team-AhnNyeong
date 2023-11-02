@@ -42,10 +42,18 @@ struct SettingMainView: View {
                     NavigationLink(destination: SettingNotiView()) {
                         SettingList(listTitle: "알림 설정", listCaption: "알림 시간 설정 및 알람별 활성화 설정")
                     }
-                    SettingList(listTitle: "글자 크기 설정", listCaption: "앱 내 글자 크기 설정")
-                    SettingList(listTitle: "이름 수정", listCaption: "가입된 이름 수정")
-                    SettingList(listTitle: "사용 가이드", listCaption: "앱 사용 가이드")
-                    SettingList(listTitle: "서비스 약관", listCaption: "개인정보처리방침 및 서비스 이용약관")
+                    NavigationLink(destination: EmptyView()) {  // not completed
+                        SettingList(listTitle: "글자 크기 설정", listCaption: "앱 내 글자 크기 설정")
+                    }
+                    NavigationLink(destination: EmptyView()) {  // not completed
+                        SettingList(listTitle: "이름 수정", listCaption: "가입된 이름 수정")
+                    }
+                    NavigationLink(destination: SettingGuideView()) {
+                        SettingList(listTitle: "사용 가이드", listCaption: "앱 사용 가이드")
+                    }
+                    NavigationLink(destination: SettingTermView()) {
+                        SettingList(listTitle: "서비스 약관", listCaption: "개인정보처리방침 및 서비스 이용약관")
+                    }
                 }
                 .padding(.leading, 16)
             HStack(alignment: .center) {
