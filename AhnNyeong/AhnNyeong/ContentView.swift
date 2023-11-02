@@ -30,5 +30,6 @@ struct ContentView: View {
 }
 
 //#Preview {
-//    ContentView(selectedUserType: .notyet)
+//    let loginType: ContentView.LoginType
+//    ContentView(selectedUserType: ContentView.LoginType.notyet)
 //}

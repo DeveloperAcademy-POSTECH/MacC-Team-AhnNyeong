@@ -10,15 +10,17 @@ import SwiftUI
 struct SettingGuideView: View {
     @State var showAdminGuide = false
     @State var showTargetGuide = false
+    let adminGuideTitle = "사회복지사 앱 사용 가이드"
+    let targetGuideTitle = "이용자 앱 사용 가이드"
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             SettingViewTitle(settingViewTitle: "사용 가이드")
             Group {
-                ModalButton(showModal: $showAdminGuide, buttonTitle: "사회복지사 앱 사용 가이드")
+                ModalButton(showModal: $showAdminGuide, buttonTitle: adminGuideTitle)
                 .sheet(isPresented: self.$showAdminGuide) {
                     EmptyView()
                 }
-                ModalButton(showModal: $showTargetGuide, buttonTitle: "이용자 앱 사용 가이드")
+                ModalButton(showModal: $showTargetGuide, buttonTitle: adminGuideTitle)
                 .sheet(isPresented: self.$showTargetGuide) {
                     EmptyView()
                 }

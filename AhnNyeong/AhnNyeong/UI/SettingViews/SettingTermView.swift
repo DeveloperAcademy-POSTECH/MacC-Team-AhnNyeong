@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct SettingTermView: View {
+    let termTitle1 = "(필수) 이용약관 및 정보 수집/이용"
+    let termTitle2 = "(필수) 민감정보 수집/이용"
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             SettingViewTitle(settingViewTitle: "서비스 약관")
             Group {
-                NavigationLink(destination: EmptyView()) {  // not completed
-                    TermList(termTitle: "(필수) 이용약관 및 정보 수집/이용")
+                NavigationLink(destination: DetailTermView(viewTitle: termTitle1, termImg: "scribble")) {  // not completed
+                    TermList(termTitle: termTitle1)
                 }
                 DividingRectangle(dividingType: .listDivider)
-                NavigationLink(destination: EmptyView()) {  // not completed
-                    TermList(termTitle: "(필수) 민감정보 수집/이용")
+                NavigationLink(destination: DetailTermView(viewTitle: termTitle2, termImg: "scribble.variable")) {  // not completed
+                    TermList(termTitle: termTitle2)
                 }
             }
             .padding(.leading, 16)
