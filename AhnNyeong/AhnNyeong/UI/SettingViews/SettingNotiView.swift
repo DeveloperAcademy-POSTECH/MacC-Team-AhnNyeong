@@ -23,6 +23,7 @@ struct SettingNotiView: View {
                 Text("개별 알림 활성화")
                     .font(.system(size: 18, weight: .bold))
                     .foregroundColor(.black400)
+                    .padding(.top, 20)
                 HStack(spacing: 0) {
                     Text("활성화된 알람은 ")
                     Text("오전 9시")
@@ -121,7 +122,7 @@ struct SettingViewTitle: View {
                 .padding(.top, 20)
             
             DividingRectangle(dividingType: .naviTitleDivider)
-                .padding(.vertical, 20)
+                .padding(.top, 20)
         }
     }
 }
