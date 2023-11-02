@@ -8,27 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    enum LoginType: String {
-        case imper
-        case mng
-        case notyet
-    }
-    
-    @AppStorage("LoginType") private var selectedUserType: ContentView.LoginType = .notyet
-    
     var body: some View {
-        NavigationStack {
-            if selectedUserType == .imper {
-                ImperView(selectedUserType: $selectedUserType)
-            } else if selectedUserType == .mng {
-                ManagerViewForMVP(selectedUserType: $selectedUserType)
-            } else {
-                LoginTypeView(selectedUserType: $selectedUserType)
-            }
-        }
+        OnboardingView()
+//        LoginCompView()
     }
 }
 
-//#Preview {
-//    ContentView(selectedUserType: .notyet)
-//}
+#Preview {
+    ContentView()
+}

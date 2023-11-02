@@ -1,14 +1,17 @@
 //
-//  LogInView.swift
+//  TargetRegiView.swift
 //  AhnNyeong
 //
-//  Created by qwd on 11/1/23.
+//  Created by qwd on 11/2/23.
 //
+
 
 import SwiftUI
 
-struct LoginView: View {
+struct TargetRegiView: View {
     @State var tag: Int? = nil
+    @State var instcode: String = ""
+    @State var name: String = ""
     @State var email: String = ""
     @State var password: String = ""
     
@@ -17,6 +20,40 @@ struct LoginView: View {
             ZStack {
                 Color.white300.ignoresSafeArea()
                 VStack {
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("소속 기관 코드")
+                            .fontWeight(.semibold)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .frame(width:361, height: 55)
+                            .cornerRadius(10)
+                            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                            .overlay {
+                                TextField("abcedfg", text: $instcode)
+                                    .padding()
+                            }
+                            .padding(.vertical,20)
+                            .frame(width: 361, height: 55)
+                            .cornerRadius(10)
+                    }
+
+                    VStack(alignment: .leading, spacing: 10) {
+                        Text("이름")
+                            .fontWeight(.semibold)
+                        Rectangle()
+                            .foregroundColor(.white)
+                            .frame(width:361, height: 55)
+                            .cornerRadius(10)
+                            .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                            .overlay {
+                                TextField("박보검", text: $name)
+                                    .padding()
+                            }
+                            .padding(.vertical,20)
+                            .frame(width: 361, height: 55)
+                            .cornerRadius(10)
+                    }
+
                     VStack(alignment: .leading, spacing: 10) {
                         Text("이메일")
                             .fontWeight(.semibold)
@@ -33,7 +70,6 @@ struct LoginView: View {
                             .frame(width: 361, height: 55)
                             .cornerRadius(10)
                     }
-                    .padding(20)
                     VStack(alignment: .leading) {
                         Text("비밀번호")
                             .fontWeight(.semibold)
@@ -50,46 +86,23 @@ struct LoginView: View {
                             .cornerRadius(10)
                     }
                     .padding(20)
-                    HStack {
-                        Image("radioButton")
-//                        Picker(selection: $order. ){
-//
-//                        }.pickerStyle(RadioGroupPickerStyle())
-                        //여기 라디오 버튼 들어가야댐
-                        Text("로그인 상태 유지")
-                            .fontWeight(.semibold)
-                            .font(.system(size: 16))
-                            .padding(.trailing,210)
-                    }
                     Spacer()
-                    VStack(alignment:.center, spacing :20){
-                        HStack {
-                            Text("계정이 없으신가요? ")
-                                .font(.system(size:12))
-                            NavigationLink("", destination: StartRegiView(), tag: 2, selection: self.$tag)
-                            Button {
-                                self.tag = 2
-                            } label: {
-                                Text("회원가입하기")
-                                    .underline(true, color: Color.pink)
-                                    .font(.system(size: 12))
-                                    .foregroundColor(.pink)
-                            }
-
-                        }
+                    VStack(alignment:.center, spacing :20) {
+                        NavigationLink("", destination: TermView(), tag: 5, selection: $tag)
                         Button {
-                            //여긴 아무것도 없음. 
+                            //some action is here
+                            self.tag = 5
                         } label: {
                             Rectangle()
                                 .frame(width: 361, height: 58)
                                 .cornerRadius(61)
                                 .foregroundColor(Color.coral300)
                                 .overlay{
-                                    Text("시작하기")
+                                    Text("다음")
                                         .foregroundColor(.white)
                                 }
                         }
-                        VStack {
+                        VStack{
                             HStack(spacing:0){
                                 Text("로그인 함으로, ")
                                     .font(.system(size: 12))
@@ -99,10 +112,10 @@ struct LoginView: View {
                                 Text(" 서비스의")
                                     .font(.system(size: 12))
                             }
-                            HStack(spacing:0) {
+                            HStack(spacing: 0){
                                 Text("Terms & Conditions")
-                                    .font(.system(size: 12))
                                     .foregroundColor(.pink)
+                                    .font(.system(size: 12))
                                 Text(" 그리고 Policies에 동의하는 것으로 간주됩니다.")
                                     .font(.system(size: 12))
                             }
@@ -112,19 +125,20 @@ struct LoginView: View {
                 }
                 .padding(.vertical, 20)
             }
-            .navigationTitle("로그인")
+            .navigationTitle("이용자 회원가입")
             .navigationBarTitleDisplayMode(.large)
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading){
-                BeforeLogInButton()
+                GoToStartRegiButtonForTarget()
+//                BeforeLogInButton()
             }
         }
     }
 }
 
-struct BeforeLogInButton: View {
+struct GoToStartRegiButtonForTarget: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         Button(action: {
@@ -133,15 +147,24 @@ struct BeforeLogInButton: View {
             HStack {
                 Image(systemName: "chevron.left")
                     .foregroundColor(.coral500)
-                Text("로그인 취소")
+                Text("이전 화면")
                     .foregroundColor(.coral500)
             }
         }
     }
 }
 
-
+struct MngRegiTitle: View {
+    var body: some View {
+        HStack {
+            Text("사회복지사")
+                .foregroundColor(Color.coral500)
+            Text(" 회원 가입")
+        }
+    }
+}
 
 #Preview {
-    LoginView()
+    TargetRegiView()
 }
+

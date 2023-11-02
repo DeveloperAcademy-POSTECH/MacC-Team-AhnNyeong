@@ -60,7 +60,6 @@
 		DE7697762AF253BE00AE4FA9 /* LogInCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697752AF253BD00AE4FA9 /* LogInCompView.swift */; };
 		DE7697782AF253C600AE4FA9 /* StartRegiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697772AF253C600AE4FA9 /* StartRegiView.swift */; };
 		DE76977A2AF253CC00AE4FA9 /* TermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697792AF253CC00AE4FA9 /* TermView.swift */; };
-		DE76977C2AF253D400AE4FA9 /* RegiCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE76977B2AF253D400AE4FA9 /* RegiCompView.swift */; };
 		DE76977E2AF253F800AE4FA9 /* SympView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE76977D2AF253F800AE4FA9 /* SympView.swift */; };
 		DE7697802AF253FD00AE4FA9 /* TargetCalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE76977F2AF253FD00AE4FA9 /* TargetCalView.swift */; };
 		DE7697822AF2540500AE4FA9 /* DailyEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697812AF2540500AE4FA9 /* DailyEditView.swift */; };
@@ -78,6 +77,11 @@
 		DE7697AF2AF25A1200AE4FA9 /* SettingGuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697AE2AF25A1200AE4FA9 /* SettingGuideView.swift */; };
 		DE7697B12AF25A1C00AE4FA9 /* SettingTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697B02AF25A1C00AE4FA9 /* SettingTermView.swift */; };
 		DE7697B42AF25AAA00AE4FA9 /* ModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697B32AF25AAA00AE4FA9 /* ModelTest.swift */; };
+		DE7697B62AF3003600AE4FA9 /* MngRegiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697B52AF3003600AE4FA9 /* MngRegiView.swift */; };
+		DE7697B82AF3018300AE4FA9 /* TargetRegiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697B72AF3018300AE4FA9 /* TargetRegiView.swift */; };
+		DE7697BA2AF3075300AE4FA9 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697B92AF3075300AE4FA9 /* TestView.swift */; };
+		DE7697BC2AF3085C00AE4FA9 /* MngRegiCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697BB2AF3085C00AE4FA9 /* MngRegiCompView.swift */; };
+		DE7697BE2AF30ABA00AE4FA9 /* TargetRegiCompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697BD2AF30ABA00AE4FA9 /* TargetRegiCompView.swift */; };
 		DEEBFF012AE4FD8D005098E3 /* ManagerViewForMVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEBFF002AE4FD8D005098E3 /* ManagerViewForMVP.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,7 +107,6 @@
 		DE7697752AF253BD00AE4FA9 /* LogInCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInCompView.swift; sourceTree = "<group>"; };
 		DE7697772AF253C600AE4FA9 /* StartRegiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRegiView.swift; sourceTree = "<group>"; };
 		DE7697792AF253CC00AE4FA9 /* TermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermView.swift; sourceTree = "<group>"; };
-		DE76977B2AF253D400AE4FA9 /* RegiCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegiCompView.swift; sourceTree = "<group>"; };
 		DE76977D2AF253F800AE4FA9 /* SympView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SympView.swift; sourceTree = "<group>"; };
 		DE76977F2AF253FD00AE4FA9 /* TargetCalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetCalView.swift; sourceTree = "<group>"; };
 		DE7697812AF2540500AE4FA9 /* DailyEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyEditView.swift; sourceTree = "<group>"; };
@@ -121,6 +124,11 @@
 		DE7697AE2AF25A1200AE4FA9 /* SettingGuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingGuideView.swift; sourceTree = "<group>"; };
 		DE7697B02AF25A1C00AE4FA9 /* SettingTermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTermView.swift; sourceTree = "<group>"; };
 		DE7697B32AF25AAA00AE4FA9 /* ModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTest.swift; sourceTree = "<group>"; };
+		DE7697B52AF3003600AE4FA9 /* MngRegiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MngRegiView.swift; sourceTree = "<group>"; };
+		DE7697B72AF3018300AE4FA9 /* TargetRegiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetRegiView.swift; sourceTree = "<group>"; };
+		DE7697B92AF3075300AE4FA9 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		DE7697BB2AF3085C00AE4FA9 /* MngRegiCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MngRegiCompView.swift; sourceTree = "<group>"; };
+		DE7697BD2AF30ABA00AE4FA9 /* TargetRegiCompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetRegiCompView.swift; sourceTree = "<group>"; };
 		DEEBFF002AE4FD8D005098E3 /* ManagerViewForMVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewForMVP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -212,8 +220,8 @@
 				DE7697B22AF25AA200AE4FA9 /* Model */,
 				7D2F48C92AE4F70100D8FAC8 /* MVP */,
 				DE7697A62AF256AF00AE4FA9 /* LoFi */,
-				DE7697A52AF2567800AE4FA9 /* UI */,
 				DE76976F2AF2530C00AE4FA9 /* Resources */,
+				DE7697A52AF2567800AE4FA9 /* UI */,
 				7DF11C2C2AB03D8F005C0AE3 /* Preview Content */,
 				7D0A95112AD7C90C00F6836D /* GoogleService-Info.plist */,
 				7DF11C262AB03D8E005C0AE3 /* AhnNyeongApp.swift */,
@@ -233,12 +241,16 @@
 		DE7697692AF252CA00AE4FA9 /* LoginViews */ = {
 			isa = PBXGroup;
 			children = (
+				DE76976A2AF252DE00AE4FA9 /* OnboardingView.swift */,
 				DE7697732AF253AE00AE4FA9 /* LogInView.swift */,
 				DE7697772AF253C600AE4FA9 /* StartRegiView.swift */,
+				DE7697B52AF3003600AE4FA9 /* MngRegiView.swift */,
+				DE7697B72AF3018300AE4FA9 /* TargetRegiView.swift */,
+				DE7697B92AF3075300AE4FA9 /* TestView.swift */,
 				DE7697792AF253CC00AE4FA9 /* TermView.swift */,
-				DE76977B2AF253D400AE4FA9 /* RegiCompView.swift */,
 				DE7697752AF253BD00AE4FA9 /* LogInCompView.swift */,
-				DE76976A2AF252DE00AE4FA9 /* OnboardingView.swift */,
+				DE7697BB2AF3085C00AE4FA9 /* MngRegiCompView.swift */,
+				DE7697BD2AF30ABA00AE4FA9 /* TargetRegiCompView.swift */,
 			);
 			path = LoginViews;
 			sourceTree = "<group>";
@@ -455,9 +467,12 @@
 				7D5375FF2ADD63DF00D338D5 /* MensInfo.swift in Sources */,
 				DEEBFF012AE4FD8D005098E3 /* ManagerViewForMVP.swift in Sources */,
 				7DF11C292AB03D8E005C0AE3 /* ContentView.swift in Sources */,
+				DE7697BE2AF30ABA00AE4FA9 /* TargetRegiCompView.swift in Sources */,
 				DE7697AD2AF25A0B00AE4FA9 /* SettingNotiView.swift in Sources */,
+				DE7697B62AF3003600AE4FA9 /* MngRegiView.swift in Sources */,
 				DE7697B42AF25AAA00AE4FA9 /* ModelTest.swift in Sources */,
 				7D5020C82AF1E43B004B6312 /* Color.swift in Sources */,
+				DE7697B82AF3018300AE4FA9 /* TargetRegiView.swift in Sources */,
 				DE7697722AF2538E00AE4FA9 /* AdminMngView.swift in Sources */,
 				DE7697AF2AF25A1200AE4FA9 /* SettingGuideView.swift in Sources */,
 				DE7697B12AF25A1C00AE4FA9 /* SettingTermView.swift in Sources */,
@@ -465,6 +480,7 @@
 				DE76978A2AF2554500AE4FA9 /* AdminMainView.swift in Sources */,
 				DE7697922AF255C000AE4FA9 /* AdminSpecificHistoryModalView.swift in Sources */,
 				7D5376072AE0166200D338D5 /* EditView.swift in Sources */,
+				DE7697BC2AF3085C00AE4FA9 /* MngRegiCompView.swift in Sources */,
 				DE7697942AF255CC00AE4FA9 /* AdminTagMemoView.swift in Sources */,
 				DE7697902AF255AC00AE4FA9 /* AdminSpecificView.swift in Sources */,
 				DE7697862AF2550700AE4FA9 /* AdminCalView.swift in Sources */,
@@ -484,7 +500,7 @@
 				DE7697882AF2552600AE4FA9 /* AdminCalModalView.swift in Sources */,
 				DE7697AB2AF259E400AE4FA9 /* SettingMainView.swift in Sources */,
 				DE7697782AF253C600AE4FA9 /* StartRegiView.swift in Sources */,
-				DE76977C2AF253D400AE4FA9 /* RegiCompView.swift in Sources */,
+				DE7697BA2AF3075300AE4FA9 /* TestView.swift in Sources */,
 				DE76976B2AF252DE00AE4FA9 /* OnboardingView.swift in Sources */,
 				DE7697822AF2540500AE4FA9 /* DailyEditView.swift in Sources */,
 			);
