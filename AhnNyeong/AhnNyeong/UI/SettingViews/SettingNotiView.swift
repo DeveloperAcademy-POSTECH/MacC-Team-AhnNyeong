@@ -21,6 +21,7 @@ struct SettingNotiView: View {
                 .font(.system(size: 28, weight: .bold))
                 .foregroundColor(.black400)
                 .padding(.horizontal, 16)
+                .padding(.top, 20)
             
             DividingRectangle(dividingType: .naviTitleDivider)
                 .padding(.vertical, 20)
@@ -79,8 +80,40 @@ struct SettingNotiView: View {
             .padding(.horizontal, 16)
             Spacer()
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: BackButton(backBtnTitleType: .titleImage, backButtonTitle: "gearshape.fill"))
+        .navigationBarTitleDisplayMode(.inline)
         .background(Color.white300)
         
+    }
+}
+
+enum BackBtnTitleType {
+    case titleText
+    case titleImage
+}
+
+struct BackButton: View {
+    @Environment(\.dismiss) private var dismiss
+    let backBtnTitleType: BackBtnTitleType
+    let backButtonTitle: String
+    var body: some View {
+        HStack(spacing: 0) {
+            Image(systemName: "chevron.left")
+                .font(.system(size: 17, weight: .semibold))
+            switch backBtnTitleType {
+            case .titleText:
+                Text(backButtonTitle)
+                    .font(.system(size: 17, weight: .regular))
+            case .titleImage:
+                Image(systemName: backButtonTitle)
+                    .font(.system(size: 17, weight: .semibold)) // need some check!
+            }
+        }
+        .foregroundColor(.coral500)
+        .onTapGesture {
+            dismiss()
+        }
     }
 }
 

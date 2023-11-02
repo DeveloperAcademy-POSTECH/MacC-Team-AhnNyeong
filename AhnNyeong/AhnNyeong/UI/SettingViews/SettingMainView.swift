@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct SettingMainView: View {
     @Binding var selectedUserType: ContentView.LoginType
     @State private var showLogoutAlert = false
