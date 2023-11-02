@@ -122,6 +122,27 @@ struct DatePickerList: View {
 }
 
 // MARK: - Component
+// 모달 버튼: 선택 시 모달이 나타나는 버튼
+struct ModalButton: View {
+    @Binding var showModal: Bool
+    let buttonTitle: String
+    var body: some View {
+        Button(action: {
+            self.showModal = true
+        }, label: {
+            Rectangle()
+                .frame(height: 70)
+                .foregroundColor(.coral500)
+                .cornerRadius(10)
+                .shadow(color: .black500.opacity(0.15), radius: 8, x: 0, y: 4)
+                .overlay {
+                    Text(buttonTitle)
+                        .semiBold18White75()
+                }
+        })
+    }
+}
+
 // Divider() 대체: 구분선 역할의 Rectangle(내비게이션용/리스트용)
 enum DividingType {
     case naviTitleDivider

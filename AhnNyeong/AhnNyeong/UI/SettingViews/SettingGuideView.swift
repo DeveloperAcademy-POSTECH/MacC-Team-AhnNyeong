@@ -36,26 +36,6 @@ struct SettingGuideView: View {
     }
 }
 
-struct ModalButton: View {
-    @Binding var showModal: Bool
-    let buttonTitle: String
-    var body: some View {
-        Button(action: {
-            self.showModal = true
-        }, label: {
-            Rectangle()
-                .frame(height: 70)
-                .foregroundColor(.coral500)
-                .cornerRadius(10)
-                .shadow(color: .black500.opacity(0.15), radius: 8, x: 0, y: 4)
-                .overlay {
-                    Text(buttonTitle)
-                        .semiBold18White75()
-                }
-        })
-    }
-}
-
 #Preview {
     SettingGuideView()
 }

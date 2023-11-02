@@ -21,6 +21,7 @@ struct SettingMainView: View {
             Group {
                 Text(selectedUserType == .mng ? "\(userName) 사회복지사님" : "\(userName) 님")
                     .font(.system(size: 32, weight: .bold))
+                    .foregroundColor(.black500)
                     .padding(.top, 20)
                 HStack(spacing: 0) {
                     Image(systemName: selectedUserType == .mng ? "checkmark.seal.fill" : "person.2.fill")
