@@ -93,6 +93,7 @@ struct BackButton: View {
         HStack(spacing: 0) {
             Image(systemName: "chevron.left")
                 .font(.system(size: 17, weight: .semibold))
+                .padding(.trailing, 4)
             switch backBtnTitleType {
             case .titleText:
                 Text(backButtonTitle)

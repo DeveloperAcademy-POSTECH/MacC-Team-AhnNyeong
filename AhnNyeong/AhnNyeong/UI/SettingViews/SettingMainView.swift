@@ -108,8 +108,9 @@ struct SettingMainView: View {
             }
             Spacer()
         }
-        .navigationBarTitleDisplayMode(.large)
-//        .ignoresSafeArea()
+        .navigationBarBackButtonHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(leading: BackButton(backBtnTitleType: .titleImage, backButtonTitle: "calendar"))
         .background(Color.white300)
     }
 }
