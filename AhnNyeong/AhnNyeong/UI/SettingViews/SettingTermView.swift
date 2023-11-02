@@ -32,25 +32,6 @@ struct SettingTermView: View {
     }
 }
 
-struct TermList: View {
-    let termTitle: String
-    var body: some View {
-        VStack(spacing: 0) {
-            HStack(spacing: 0) {
-                Text(termTitle)
-                    .semiBold16Black400()
-                Spacer()
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 17, weight: .bold))
-                    .foregroundColor(.coral500)
-            }
-            .padding(.vertical, 22.5)
-            .padding(.trailing, 16)
-            DividingRectangle(dividingType: .listDivider)
-        }
-    }
-}
-
 #Preview {
     SettingTermView()
 }

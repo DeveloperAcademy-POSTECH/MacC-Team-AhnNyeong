@@ -12,9 +12,10 @@ struct SettingMainView: View {
     @State private var showLogoutAlert = false
     @State private var showDeleteAlert = false
     @State private var naviToOutCheckView = false
-    let userName: String
-    let mngNm: String = "이선생"
-    let instNm: String = "복지센터"
+    let userName: String    // not completed
+    let mngNm: String = "이선생"   // sample
+    let instNm: String = "복지센터" // sample
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Group {
@@ -26,7 +27,7 @@ struct SettingMainView: View {
                     Text(selectedUserType == .mng ? " 기관(\(instNm)) 인증됨" : " \(instNm) / \(mngNm) 사회복지사님")
                 }
                 .font(.system(size: 12, weight: .light))
-                .foregroundColor(.white)
+                .foregroundColor(Color.white50)
                 .padding(.vertical, 5)
                 .padding(.horizontal, 10)
                     .background {
@@ -112,25 +113,6 @@ struct SettingMainView: View {
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(leading: BackButton(backBtnTitleType: .titleImage, backButtonTitle: "calendar"))
         .background(Color.white300)
-    }
-}
-
-struct SettingList: View {
-    let listTitle: String
-    let listCaption: String
-    var body: some View {
-        VStack(spacing: 0) {
-            HStack(spacing: 0) {
-                ListTitle(listTitle: listTitle, listCaption: listCaption)
-                Spacer()
-                Image(systemName: "chevron.right")
-                    .font(.system(size: 17, weight: .bold))
-                    .foregroundColor(.coral500)
-            }
-            .padding(.vertical, 20)
-            .padding(.trailing, 16)
-            DividingRectangle(dividingType: .listDivider)
-        }
     }
 }
 
