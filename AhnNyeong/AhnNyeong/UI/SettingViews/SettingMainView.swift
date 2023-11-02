@@ -11,6 +11,7 @@ struct SettingMainView: View {
     @Binding var selectedUserType: ContentView.LoginType
     @State private var showLogoutAlert = false
     @State private var showDeleteAlert = false
+    @State private var naviToOutCheckView = false
     let userName: String
     let mngNm: String = "이선생"
     let instNm: String = "복지센터"
@@ -67,9 +68,9 @@ struct SettingMainView: View {
                         Alert(
                             title: Text("로그아웃"),
                             message: Text("로그인 후 언제든 다시 접속할 수 있습니다. \n계정을 지우려면 ‘계정 삭제’를 눌러주세요."),
-                            primaryButton: .destructive(Text("확인"), action: {
+                            primaryButton: .destructive(Text("확인"), action: {   // not completed
                                 // 여기에서 로그아웃 작업을 수행하십시오.
-                                selectedUserType = .notyet
+                                self.naviToOutCheckView = true
                             }),
                             secondaryButton: .cancel()
                         )
@@ -83,9 +84,10 @@ struct SettingMainView: View {
                     .alert(isPresented: $showDeleteAlert) {
                         Alert(
                             title: Text("계정을 삭제합니다"),
-                            message: Text("계정을 삭제하면 이용자와 연결이 끊어지고 \n더 이상 정보에 접근할 수 없게 됩니다."),
-                            primaryButton: .destructive(Text("삭제"), action: {
+                                message: Text("계정을 삭제하면 이용자와 연결이 끊어지고 \n더 이상 정보에 접근할 수 없게 됩니다."),
+                                primaryButton: .destructive(Text("삭제"), action: {   // not completed
                                 // 여기에서 계정 삭제 작업을 수행하십시오.
+                                    self.naviToOutCheckView = true
                             }),
                             secondaryButton: .cancel()
                         )
@@ -98,6 +100,12 @@ struct SettingMainView: View {
             .underline()
             .listRowSeparator(.hidden)
             .padding(.top, 30)
+            NavigationLink(
+                destination: OutCheckView(selectedUserType: $selectedUserType, isLogOut: true),
+                isActive: $naviToOutCheckView
+            ) {
+                EmptyView()
+            }
             Spacer()
         }
         .navigationBarTitleDisplayMode(.large)
