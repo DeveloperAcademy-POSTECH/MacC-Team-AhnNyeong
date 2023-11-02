@@ -17,14 +17,7 @@ struct SettingNotiView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
-            Text("알림 설정")
-                .font(.system(size: 28, weight: .bold))
-                .foregroundColor(.black400)
-                .padding(.horizontal, 16)
-                .padding(.top, 20)
-            
-            DividingRectangle(dividingType: .naviTitleDivider)
-                .padding(.vertical, 20)
+            SettingViewTitle(settingViewTitle: "알림 설정")
             
             VStack(alignment: .leading, spacing: 0) {
                 Text("개별 알림 활성화")
@@ -81,8 +74,8 @@ struct SettingNotiView: View {
             Spacer()
         }
         .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: BackButton(backBtnTitleType: .titleImage, backButtonTitle: "gearshape.fill"))
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(leading: BackButton(backBtnTitleType: .titleImage, backButtonTitle: "gearshape.fill"))
         .background(Color.white300)
         
     }
@@ -113,6 +106,22 @@ struct BackButton: View {
         .foregroundColor(.coral500)
         .onTapGesture {
             dismiss()
+        }
+    }
+}
+
+struct SettingViewTitle: View {
+    let settingViewTitle: String
+    var body: some View {
+        VStack(alignment: .leading, spacing: 0) {
+            Text(settingViewTitle)
+                .font(.system(size: 28, weight: .bold))
+                .foregroundColor(.black400)
+                .padding(.horizontal, 16)
+                .padding(.top, 20)
+            
+            DividingRectangle(dividingType: .naviTitleDivider)
+                .padding(.vertical, 20)
         }
     }
 }
