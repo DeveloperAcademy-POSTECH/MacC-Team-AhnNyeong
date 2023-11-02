@@ -439,6 +439,14 @@ struct Bold24White50: ViewModifier {
     }
 }
 
+struct Bold24Black400: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 24, weight: .bold))
+            .foregroundColor(.black400)
+    }
+}
+
 struct Bold28Black400: ViewModifier {
     func body(content: Content) -> some View {
         content
