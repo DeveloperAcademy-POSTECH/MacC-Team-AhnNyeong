@@ -59,9 +59,9 @@ struct TargetMainView: View {
                 .navigationDestination(isPresented: $toSympView) {
                     SympView()
                 }
-                //            .navigationDestination(isPresented: $calendarBtnClick) {
-                //                CalView()
-                //            }
+                            .navigationDestination(isPresented: $calendarBtnClick) {
+                                TargetMainView()
+                            }
             }
         }
     }
