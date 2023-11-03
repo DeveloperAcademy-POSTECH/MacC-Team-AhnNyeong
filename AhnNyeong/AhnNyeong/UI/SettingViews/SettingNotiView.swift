@@ -72,6 +72,7 @@ struct SettingNotiView: View {
             .padding(.horizontal, 16)
             Spacer()
         }
+        .backGesture()
         .navigationBarBackButtonHidden(true)
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(leading: BackButton(backBtnTitleType: .titleImage, backButtonTitle: "gearshape.fill"))
