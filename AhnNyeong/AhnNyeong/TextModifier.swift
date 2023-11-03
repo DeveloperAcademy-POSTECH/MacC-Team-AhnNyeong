@@ -39,8 +39,8 @@ extension Text {
     func medium16Black500() -> some View {
         modifier(Medium16Black500())
     }
-    func medium22Black400() -> some View {
-        modifier(Medium22Black400())
+    func medium22Black500() -> some View {
+        modifier(Medium22Black500())
     }
     // MARK: - SemiBold
     func semiBold12Black200() -> some View {
