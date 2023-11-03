@@ -61,7 +61,7 @@ struct SettingMainView: View {
             HStack(alignment: .center) {
                 Spacer()
                 Text("로그아웃")
-                    .foregroundColor(.coral500)
+                    .semiBold16Coral500()
                     .onTapGesture {
                         showLogoutAlert = true
                     }
@@ -78,7 +78,7 @@ struct SettingMainView: View {
                     }
                 Spacer()
                 Text("계정삭제")
-                    .foregroundColor(.black75)
+                    .semiBold16Black75()
                     .onTapGesture {
                         showDeleteAlert = true
                     }
@@ -95,7 +95,6 @@ struct SettingMainView: View {
                     }
                 Spacer()
                 Text("문의하기")
-                    .foregroundColor(.black75)
                 Spacer()
             }
             .underline()
