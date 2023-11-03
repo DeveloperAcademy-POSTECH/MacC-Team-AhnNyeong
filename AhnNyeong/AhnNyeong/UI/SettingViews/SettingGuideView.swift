@@ -20,13 +20,12 @@ struct SettingGuideView: View {
                 .sheet(isPresented: self.$showAdminGuide) {
                     EmptyView()
                 }
-                ModalButton(showModal: $showTargetGuide, buttonTitle: adminGuideTitle)
+                ModalButton(showModal: $showTargetGuide, buttonTitle: targetGuideTitle)
                 .sheet(isPresented: self.$showTargetGuide) {
                     EmptyView()
                 }
             }
-            .padding(.horizontal, 16)
-            .padding(.top, 30)
+            .padding(EdgeInsets(top: 30, leading: 16, bottom: 0, trailing: 16))
             Spacer()
         }
         .navigationBarBackButtonHidden(true)
