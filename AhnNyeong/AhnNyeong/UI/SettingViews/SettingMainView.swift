@@ -29,7 +29,7 @@ struct SettingMainView: View {
                 }
                 .font(.system(size: 12, weight: .light))
                 .foregroundColor(Color.white50)
-                .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))    // 백그라운드 Rectangle을 위한 패딩인데 화면에서 이상해짐
+                .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                 .background {
                     Rectangle()
                         .cornerRadius(10)
