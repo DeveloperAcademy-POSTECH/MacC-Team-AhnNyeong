@@ -37,8 +37,7 @@ struct SettingViewTitle: View {
             Text(settingViewTitle)
                 .font(.system(size: 28, weight: .bold))
                 .foregroundColor(.black400)
-                .padding(.horizontal, 16)
-                .padding(.top, 20)
+                .padding(EdgeInsets(top: 20, leading: 16, bottom: 0, trailing: 16))
             DividingRectangle(dividingType: .naviTitleDivider)
                 .padding(.top, 20)
         }
@@ -72,8 +71,7 @@ struct TermList: View {
                     .font(.system(size: 17, weight: .bold))
                     .foregroundColor(.coral500)
             }
-            .padding(.vertical, 22.5)
-            .padding(.trailing, 16)
+            .padding(EdgeInsets(top: 22.5, leading: 16, bottom: 22.5, trailing: 16))
             DividingRectangle(dividingType: .listDivider)
         }
     }
@@ -92,8 +90,7 @@ struct SettingList: View {
                     .font(.system(size: 17, weight: .bold))
                     .foregroundColor(.coral500)
             }
-            .padding(.vertical, 20)
-            .padding(.trailing, 16)
+            .padding(EdgeInsets(top: 20, leading: 0, bottom: 20, trailing: 16))
             DividingRectangle(dividingType: .listDivider)
         }
     }
@@ -105,8 +102,7 @@ struct ToggleList: View {
     @Binding var toggleIsOn: Bool
     var body: some View {
         Toggle(toggleTitle, isOn: $toggleIsOn)
-            .padding(.vertical, 6.5)
-            .padding(.horizontal, 16)
+            .padding(EdgeInsets(top: 6.5, leading: 16, bottom: 6.5, trailing: 16))
     }
 }
 
@@ -116,8 +112,7 @@ struct DatePickerList: View {
     @Binding var selection: Date
     var body: some View {
         DatePicker(datePickerTitle, selection: $selection, displayedComponents: .hourAndMinute)
-            .padding(.vertical, 6.5)
-            .padding(.horizontal, 16)
+            .padding(EdgeInsets(top: 6.5, leading: 16, bottom: 6.5, trailing: 16))
     }
 }
 

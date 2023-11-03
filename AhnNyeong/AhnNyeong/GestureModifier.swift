@@ -24,7 +24,7 @@ struct BackGesture: ViewModifier {
     func body(content: Content) -> some View {
         content
             .gesture(DragGesture().onEnded({ value in
-            if value.translation.width > 10 {
+            if value.translation.width > 1 {
                 dismiss()
             }
         }))

@@ -29,14 +29,13 @@ struct SettingMainView: View {
                 }
                 .font(.system(size: 12, weight: .light))
                 .foregroundColor(Color.white50)
-                .padding(.vertical, 5)
-                .padding(.horizontal, 10)
-                    .background {
-                        Rectangle()
-                            .cornerRadius(10)
-                            .foregroundColor(.coral300)
-                    }
-                    .padding(.top, 10)
+                .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))    // 백그라운드 Rectangle을 위한 패딩인데 화면에서 이상해짐
+                .background {
+                    Rectangle()
+                        .cornerRadius(10)
+                        .foregroundColor(.coral300)
+                }
+                .padding(.top, 10)
             }
             .padding(.horizontal, 16)
             DividingRectangle(dividingType: .naviTitleDivider)
@@ -102,13 +101,10 @@ struct SettingMainView: View {
             .underline()
             .listRowSeparator(.hidden)
             .padding(.top, 30)
-            NavigationLink(
-                destination: OutCheckView(selectedUserType: $selectedUserType, isLogOut: true),
-                isActive: $naviToOutCheckView
-            ) {
-                EmptyView()
-            }
             Spacer()
+        }
+        .navigationDestination(isPresented: $naviToOutCheckView) {
+            OutCheckView(selectedUserType: $selectedUserType, isLogOut: true)
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitleDisplayMode(.inline)

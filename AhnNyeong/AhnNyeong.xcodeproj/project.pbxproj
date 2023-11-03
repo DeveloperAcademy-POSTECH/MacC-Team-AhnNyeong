@@ -57,6 +57,7 @@
 		8E7EB3562AF3A3CD00D07E25 /* DetailTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EB3552AF3A3CD00D07E25 /* DetailTermView.swift */; };
 		8E7EB3582AF3B93800D07E25 /* OutCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EB3572AF3B93800D07E25 /* OutCheckView.swift */; };
 		8E7EB35A2AF3D95000D07E25 /* SettingComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EB3592AF3D95000D07E25 /* SettingComponents.swift */; };
+		8E7EB3602AF4972600D07E25 /* GestureModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EB35F2AF4972600D07E25 /* GestureModifier.swift */; };
 		DE76976B2AF252DE00AE4FA9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE76976A2AF252DE00AE4FA9 /* OnboardingView.swift */; };
 		DE76976E2AF252FF00AE4FA9 /* TargetMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE76976D2AF252FF00AE4FA9 /* TargetMainView.swift */; };
 		DE7697722AF2538E00AE4FA9 /* AdminMngView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697712AF2538E00AE4FA9 /* AdminMngView.swift */; };
@@ -104,6 +105,7 @@
 		8E7EB3552AF3A3CD00D07E25 /* DetailTermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTermView.swift; sourceTree = "<group>"; };
 		8E7EB3572AF3B93800D07E25 /* OutCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutCheckView.swift; sourceTree = "<group>"; };
 		8E7EB3592AF3D95000D07E25 /* SettingComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingComponents.swift; sourceTree = "<group>"; };
+		8E7EB35F2AF4972600D07E25 /* GestureModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureModifier.swift; sourceTree = "<group>"; };
 		DE76976A2AF252DE00AE4FA9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DE76976D2AF252FF00AE4FA9 /* TargetMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetMainView.swift; sourceTree = "<group>"; };
 		DE7697712AF2538E00AE4FA9 /* AdminMngView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMngView.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				7DF11C282AB03D8E005C0AE3 /* ContentView.swift */,
 				7DF11C2C2AB03D8F005C0AE3 /* Preview Content */,
 				7D5020CD2AF23591004B6312 /* TextModifier.swift */,
+				8E7EB35F2AF4972600D07E25 /* GestureModifier.swift */,
 			);
 			path = AhnNyeong;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				DE7697922AF255C000AE4FA9 /* AdminSpecificHistoryModalView.swift in Sources */,
 				7D5376072AE0166200D338D5 /* EditView.swift in Sources */,
 				DE7697942AF255CC00AE4FA9 /* AdminTagMemoView.swift in Sources */,
+				8E7EB3602AF4972600D07E25 /* GestureModifier.swift in Sources */,
 				DE7697902AF255AC00AE4FA9 /* AdminSpecificView.swift in Sources */,
 				DE7697862AF2550700AE4FA9 /* AdminCalView.swift in Sources */,
 				7DF11C272AB03D8E005C0AE3 /* AhnNyeongApp.swift in Sources */,

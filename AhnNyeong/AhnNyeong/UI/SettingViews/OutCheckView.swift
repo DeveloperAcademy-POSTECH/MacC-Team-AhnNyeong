@@ -34,12 +34,9 @@ struct OutCheckView: View {
                     selectedUserType = .notyet
                     isCheckBtnPressed = true
                 }
-            NavigationLink(
-                destination: LoginTypeView(selectedUserType: $selectedUserType).navigationBarBackButtonHidden(true),
-                isActive: $isCheckBtnPressed
-            ) {
-                EmptyView()
-            }
+        }
+        .navigationDestination(isPresented: $isCheckBtnPressed) {
+            LoginTypeView(selectedUserType: $selectedUserType).navigationBarBackButtonHidden(true)
         }
         .padding(.horizontal, 16)
         .background(Color.white300)
