@@ -19,9 +19,9 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             if selectedUserType == .imper {
-                ImperView(selectedUserType: $selectedUserType)
+                SettingMainView(selectedUserType: $selectedUserType, userName: "이김생리")
             } else if selectedUserType == .mng {
-                ManagerViewForMVP(selectedUserType: $selectedUserType)
+                SettingMainView(selectedUserType: $selectedUserType, userName: "오복지")
             } else {
                 LoginTypeView(selectedUserType: $selectedUserType)
             }
@@ -30,5 +30,6 @@ struct ContentView: View {
 }
 
 //#Preview {
-//    ContentView(selectedUserType: .notyet)
+//    let loginType: ContentView.LoginType
+//    ContentView(selectedUserType: ContentView.LoginType.notyet)
 //}
