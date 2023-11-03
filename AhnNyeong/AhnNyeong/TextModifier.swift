@@ -143,7 +143,7 @@ extension Text {
     func bold24Black500() -> some View {
         modifier(Bold24Black500())
     }
-    func bBold28Black400() -> some View {
+    func bold28Black400() -> some View {
         modifier(Bold28Black400())
     }
     func bold28Black500() -> some View {
