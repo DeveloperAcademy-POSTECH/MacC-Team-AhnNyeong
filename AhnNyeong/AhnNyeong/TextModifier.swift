@@ -217,7 +217,7 @@ struct Medium16Black500: ViewModifier {
     }
 }
 
-struct Medium22Black400: ViewModifier {
+struct Medium22Black500: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.system(size: 22, weight: .medium))
