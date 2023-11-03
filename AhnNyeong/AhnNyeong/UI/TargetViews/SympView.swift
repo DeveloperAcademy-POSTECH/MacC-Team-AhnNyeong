@@ -167,10 +167,9 @@ struct SympView: View {
         return formatter
     }()
     var body: some View {
-        ZStack {
-            Color.white300.ignoresSafeArea(.all)
             VStack(spacing: 20) {
                 TodayWithDayOfWeek()
+                    .padding(.top, 5)
                 MensSympDetailView(mensSympSelected: $mensSympSelected, imgTitle: mensSympTitle)
                 MensAmtDetailView(mensAmtSelected: $mensAmtSelected, imgTitle: mensAmtTitle)
                 MoodDetailView(emoLvSelected: $emoLvSelected, imgTitle: emoLvTitle)
@@ -190,9 +189,12 @@ struct SympView: View {
                             .shadow(color: .black500.opacity(0.15), radius: 4, x: 0, y: 4)
                     })
                 }
+                Spacer()
             }
             .padding(.horizontal, 16)
-        }
+            .background(Color.white300)
+            .navigationBarBackButtonHidden()
+            
     }
 }
 
