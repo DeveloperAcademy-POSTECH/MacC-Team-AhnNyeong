@@ -17,7 +17,7 @@ struct TextModifier: View {
 // MARK: - Weight(Regular/Medium/SemiBold/Bold/Heavy) + Size(12 to 32) + Color (Coral/Black/White)
 extension Text {
     // MARK: - Regular
-    func regular12Coral500() -> some View {
+    func regular12Black500() -> some View {
         modifier(Regular12Black500())
     }
     func regular17Coral500() -> some View {
