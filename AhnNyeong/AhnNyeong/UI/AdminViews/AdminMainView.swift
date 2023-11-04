@@ -10,34 +10,50 @@ import SwiftUI
 struct AdminMainView: View {
     let dateformat: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.dateFormat = "M월 d일(EEE)"
+        formatter.dateFormat = "Y년 M월 d일(EEE)"
         return formatter
     }()
     var body: some View {
-        VStack(spacing: 20) {
-            HStack {
-                Image(systemName: "bell")
-                    .modifier(Regular26Coral500())
-                Spacer()
-                Image(systemName: "gearshape.fill")
-                    .modifier(Regular26Coral500())
-            }
-            .padding(EdgeInsets(top: 11, leading: 16, bottom: 11, trailing: 16))
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("2023년")
-                        .medium22Black500()
-                    Text("\(dateformat.string(from: Date()))")
-                        .bold28Black500()
+        NavigationStack {
+            ScrollView {
+                VStack(spacing: 20) {
+//                    HStack {
+//                        VStack(alignment: .leading) {
+//                            Text("2023년")
+//                                .medium22Black500()
+//                            Text("\(dateformat.string(from: Date()))")
+//                                .bold28Black500()
+//                        }
+//                        Spacer()
+//                    }
+                    TodayMensInfo()
+                    NextMensInfoView()
+                    Spacer()
                 }
-                Spacer()
+                .padding(.horizontal, 16)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        Button(action: {
+                            //
+                        }, label: {
+                            Image(systemName: "bell")
+                                .foregroundColor(Color.coral500)
+                        })
+                    }
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            //
+                        }, label: {
+                            Image(systemName: "gearshape.fill")
+                                .foregroundColor(Color.coral500)
+                        })
+                    }
+                }
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationTitle(Text("\(dateformat.string(from: Date()))"))
             }
-            TodayMensInfo()
-            NextMensInfoView()
-            Spacer()
+            .background(Color.white300)
         }
-        .padding(.horizontal, 16)
-        .background(Color.white300)
     }
 }
 
@@ -78,7 +94,7 @@ struct TodayMensInfo: View {
 }
 
 struct NextMensInfoView: View {
-    let column = [GridItem(.flexible()), GridItem(.flexible())]
+    let column = [GridItem(.flexible(), alignment: .top), GridItem(.flexible(), alignment: .top)]
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
@@ -86,26 +102,81 @@ struct NextMensInfoView: View {
                     .bold24Black300()
                 HStack(spacing: 10) {
                     LazyVGrid(columns: column, spacing: 10, content: {
-                        ForEach(0..<7) { _ in
-                            HStack {
-                                VStack(alignment: .leading, spacing: 5) {
-                                    Text("김이최박생리")
+                        HStack {
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text("김이최박생리")
+                                    .medium16Black500()
+                                HStack(spacing: 5) {
+                                    Image("Drop")
+                                    Text("D-1")
                                         .medium16Black500()
-                                    HStack(spacing: 5) {
-                                        Image("Drop")
-                                        Text("1일째")
-                                            .medium16Black500()
-                                    }
-                                    Text("과다월경")
-                                        .regular12Black500()
-                                    Text("도전적 행동 주의")
-                                        .regular12Black500()
                                 }
-                                Spacer()
+                                Group {
+                                    Text("과다월경")
+                                    Text("도전적 행동 주의")
+                                }
+                                .modifier(Regular12Black500())
+                                .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+                                .background(TagBackgroundView())
                             }
-                            .padding(10)
-                            .background(NextMensInfoDetailBox())
+                            Spacer()
                         }
+                        .padding(10)
+                        .background(NextMensInfoDetailBox())
+                        HStack {
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text("김이최박생리")
+                                    .medium16Black500()
+                                HStack(spacing: 5) {
+                                    Image("Drop")
+                                    Text("D-3")
+                                        .medium16Black500()
+                                }
+                                Group {
+                                    Text("불규칙한 주기")
+                                }
+                                .modifier(Regular12Black500())
+                                .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+                                .background(TagBackgroundView())
+                            }
+                            Spacer()
+                        }
+                        .padding(10)
+                        .background(NextMensInfoDetailBox())
+                        HStack {
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text("김이최박생리")
+                                    .medium16Black500()
+                                HStack(spacing: 5) {
+                                    Image("Drop")
+                                    Text("D-5")
+                                        .medium16Black500()
+                                }
+                            }
+                            Spacer()
+                        }
+                        .padding(10)
+                        .background(NextMensInfoDetailBox())
+                        HStack {
+                            VStack(alignment: .leading, spacing: 5) {
+                                Text("김이최박생리")
+                                    .medium16Black500()
+                                HStack(spacing: 5) {
+                                    Image("Drop")
+                                    Text("D-7")
+                                        .medium16Black500()
+                                }
+                                Group {
+                                    Text("과다월경")
+                                }
+                                .modifier(Regular12Black500())
+                                .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+                                .background(TagBackgroundView())
+                            }
+                            Spacer()
+                        }
+                        .padding(10)
+                        .background(NextMensInfoDetailBox())
                     })
                 }
             }
