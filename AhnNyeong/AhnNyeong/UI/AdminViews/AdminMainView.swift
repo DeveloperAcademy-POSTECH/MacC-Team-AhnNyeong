@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AdminMainView: View {
+    @Binding var selectedUserType: ContentView.LoginType
+    @State private var showNew = false
     let dateformat: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "Y년 M월 d일(EEE)"
@@ -42,12 +44,14 @@ struct AdminMainView: View {
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button(action: {
-                            //
+                            self.showNew = true
                         }, label: {
                             Image(systemName: "gearshape.fill")
                                 .foregroundColor(Color.coral500)
                         })
                     }
+                }
+                .navigationDestination(isPresented: $showNew) { SettingMainView(selectedUserType: $selectedUserType, userName: "이김생리")
                 }
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle(Text("\(dateformat.string(from: Date()))"))
@@ -58,5 +62,5 @@ struct AdminMainView: View {
 }
 
 #Preview {
-    AdminMainView()
+    AdminMainView(selectedUserType: .constant(.notyet))
 }
