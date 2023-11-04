@@ -10,8 +10,8 @@ import SwiftUI
 struct StartRegiView: View {
     @State var tag: Int? = nil
     var body: some View {
-        ZStack {
-            Color.white300.ignoresSafeArea()
+        VStack {
+//            Color.white300.ignoresSafeArea()
             NavigationStack {
                 VStack(spacing: 5) {
                     NavigationLink("", destination: MngRegiView(), tag: 3, selection: self.$tag)
@@ -46,7 +46,6 @@ struct StartRegiView: View {
                             }
                     })
                     Spacer()
-                    
                 }
                     .navigationTitle("회원 가입")
                     .navigationBarBackButtonHidden()
@@ -55,9 +54,9 @@ struct StartRegiView: View {
                             BeforeSignInButton()
                         }
                     }
-                
             }
         }
+        .background(Color.white300)
 
     }
 }

@@ -12,8 +12,7 @@ struct OnboardingView: View {
     
     var body: some View {
         NavigationStack {
-            ZStack(alignment: .bottom) {
-                Color(.coral300).ignoresSafeArea()
+            VStack {
                 VStack(alignment: .center, spacing: 20) {
                     
                     Image("AppTitle")
@@ -52,9 +51,9 @@ struct OnboardingView: View {
                     .padding(.bottom, 70)
                 }
             }
-            .ignoresSafeArea()
+            .background(Color.coral300)
+//            .ignoresSafeArea()
         }
-
     }
 }
 

@@ -17,8 +17,7 @@ struct TargetRegiView: View {
     
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color.white300.ignoresSafeArea()
+            VStack {
                 VStack {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("소속 기관 코드")
@@ -125,6 +124,7 @@ struct TargetRegiView: View {
                 }
                 .padding(.vertical, 20)
             }
+            .background(Color.white300)
             .navigationTitle("이용자 회원가입")
             .navigationBarTitleDisplayMode(.large)
         }
@@ -154,15 +154,15 @@ struct GoToStartRegiButtonForTarget: View {
     }
 }
 
-struct MngRegiTitle: View {
-    var body: some View {
-        HStack {
-            Text("사회복지사")
-                .foregroundColor(Color.coral500)
-            Text(" 회원 가입")
-        }
-    }
-}
+//struct MngRegiTitle: View {
+//    var body: some View {
+//        HStack {
+//            Text("사회복지사")
+//                .foregroundColor(Color.coral500)
+//            Text(" 회원 가입")
+//        }
+//    }
+//}
 
 #Preview {
     TargetRegiView()

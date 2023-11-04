@@ -224,12 +224,10 @@
 				DE7697A62AF256AF00AE4FA9 /* LoFi */,
 				DE76976F2AF2530C00AE4FA9 /* Resources */,
 				DE7697A52AF2567800AE4FA9 /* UI */,
-				7DF11C2C2AB03D8F005C0AE3 /* Preview Content */,
 				7D0A95112AD7C90C00F6836D /* GoogleService-Info.plist */,
 				7DF11C262AB03D8E005C0AE3 /* AhnNyeongApp.swift */,
 				7DF11C282AB03D8E005C0AE3 /* ContentView.swift */,
 				7DF11C2C2AB03D8F005C0AE3 /* Preview Content */,
-				7D5020CD2AF23591004B6312 /* TextModifier.swift */,
 			);
 			path = AhnNyeong;
 			sourceTree = "<group>";
@@ -273,6 +271,7 @@
 		DE76976F2AF2530C00AE4FA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7D5020CD2AF23591004B6312 /* TextModifier.swift */,
 				7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */,
 				7D5020C72AF1E43B004B6312 /* Color.swift */,
 			);
@@ -636,6 +635,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AhnNyeong/Preview Content\"";
+				DEVELOPMENT_TEAM = GPA5CUM32W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -664,6 +664,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AhnNyeong/Preview Content\"";
+				DEVELOPMENT_TEAM = GPA5CUM32W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

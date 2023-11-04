@@ -30,7 +30,6 @@ struct TargetRegiCompView: View {
                             .font(.system(size: 22))
                             .foregroundColor(.white)
                     }
-                    
                 }
                 .padding(.vertical,180)
                 VStack(alignment: .center) {
@@ -56,11 +55,7 @@ struct TargetRegiCompView: View {
                             .foregroundColor(.white)
                     }
                 }
-                
             }
-            
-            
-            
         }
     }
 }

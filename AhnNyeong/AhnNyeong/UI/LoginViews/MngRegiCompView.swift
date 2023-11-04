@@ -56,7 +56,6 @@ struct MngRegiCompView: View {
                             .foregroundColor(.white)
                     }
                 }
-                
             }
         }
     }

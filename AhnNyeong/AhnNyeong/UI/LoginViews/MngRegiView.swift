@@ -15,8 +15,7 @@ struct MngRegiView: View {
     
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color.white300.ignoresSafeArea()
+            VStack {
                 VStack {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("소속 기관 코드")
@@ -121,6 +120,7 @@ struct MngRegiView: View {
                 }
                 .padding(.vertical, 20)
             }
+            .background(Color.white300)
             .navigationTitle("사회복지사 회원가입")
             .navigationBarTitleDisplayMode(.large)
         }

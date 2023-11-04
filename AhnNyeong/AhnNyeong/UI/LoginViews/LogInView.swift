@@ -14,8 +14,8 @@ struct LoginView: View {
     
     var body: some View {
         NavigationStack {
-            ZStack {
-                Color.white300.ignoresSafeArea()
+            VStack {
+//                Color.white300.ignoresSafeArea()
                 VStack {
                     VStack(alignment: .leading, spacing: 10) {
                         Text("이메일")
@@ -114,6 +114,7 @@ struct LoginView: View {
             }
             .navigationTitle("로그인")
             .navigationBarTitleDisplayMode(.large)
+            .background(Color.white300)
         }
         .navigationBarBackButtonHidden(true)
         .toolbar {
