@@ -108,7 +108,7 @@ struct SettingMainView: View {
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems(leading: BackButton(backBtnTitleType: .titleImage, backButtonTitle: "calendar"))
+        .navigationBarItems(leading: BackButton(backBtnTitleType: .titleText, backButtonTitle: "뒤로"))
         .background(Color.white300)
     }
 }
