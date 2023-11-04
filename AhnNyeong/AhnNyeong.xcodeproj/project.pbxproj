@@ -17,6 +17,7 @@
 		7D0A95222ADC30B500F6836D /* ImperMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0A95212ADC30B500F6836D /* ImperMainView.swift */; };
 		7D1077472AF6861B001C6746 /* TodayMensInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1077462AF6861B001C6746 /* TodayMensInfoView.swift */; };
 		7D10774F2AF68C45001C6746 /* NextMensInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D10774E2AF68C45001C6746 /* NextMensInfoView.swift */; };
+		7D1C8B232AF6A1AF00C0311A /* SampleAdminCalModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C8B222AF6A1AF00C0311A /* SampleAdminCalModalView.swift */; };
 		7D2F48CB2AE4F71400D8FAC8 /* ImperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2F48CA2AE4F71400D8FAC8 /* ImperView.swift */; };
 		7D3AFC762AB15993003AE049 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7D3AFC752AB15933003AE049 /* .swiftlint.yml */; };
 		7D5020C82AF1E43B004B6312 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5020C72AF1E43B004B6312 /* Color.swift */; };
@@ -93,6 +94,7 @@
 		7D0A95212ADC30B500F6836D /* ImperMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImperMainView.swift; sourceTree = "<group>"; };
 		7D1077462AF6861B001C6746 /* TodayMensInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMensInfoView.swift; sourceTree = "<group>"; };
 		7D10774E2AF68C45001C6746 /* NextMensInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextMensInfoView.swift; sourceTree = "<group>"; };
+		7D1C8B222AF6A1AF00C0311A /* SampleAdminCalModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAdminCalModalView.swift; sourceTree = "<group>"; };
 		7D2F48CA2AE4F71400D8FAC8 /* ImperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImperView.swift; sourceTree = "<group>"; };
 		7D3AFC752AB15933003AE049 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		7D5020C72AF1E43B004B6312 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 				DE7697972AF2560900AE4FA9 /* AdminMMSView.swift */,
 				7D1077462AF6861B001C6746 /* TodayMensInfoView.swift */,
 				7D10774E2AF68C45001C6746 /* NextMensInfoView.swift */,
+				7D1C8B222AF6A1AF00C0311A /* SampleAdminCalModalView.swift */,
 			);
 			path = AdminViews;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				7D2F48CB2AE4F71400D8FAC8 /* ImperView.swift in Sources */,
 				DE7697982AF2560900AE4FA9 /* AdminMMSView.swift in Sources */,
 				DE76978C2AF2555500AE4FA9 /* AdminAlarmListView.swift in Sources */,
+				7D1C8B232AF6A1AF00C0311A /* SampleAdminCalModalView.swift in Sources */,
 				7D5376012ADD7C4E00D338D5 /* MensInfoStore.swift in Sources */,
 				DE7697802AF253FD00AE4FA9 /* TargetCalView.swift in Sources */,
 				8E7EB3562AF3A3CD00D07E25 /* DetailTermView.swift in Sources */,
