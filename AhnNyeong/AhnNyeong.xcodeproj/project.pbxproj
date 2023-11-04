@@ -16,7 +16,7 @@
 		7D0A951F2AD7CAE500F6836D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7D0A951E2AD7CAE500F6836D /* FirebaseStorage */; };
 		7D0A95222ADC30B500F6836D /* ImperMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0A95212ADC30B500F6836D /* ImperMainView.swift */; };
 		7D1077472AF6861B001C6746 /* TodayMensInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1077462AF6861B001C6746 /* TodayMensInfoView.swift */; };
-		7D10774D2AF68910001C6746 /* NextMensInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D10774C2AF68910001C6746 /* NextMensInfoView.swift */; };
+		7D10774F2AF68C45001C6746 /* NextMensInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D10774E2AF68C45001C6746 /* NextMensInfoView.swift */; };
 		7D2F48CB2AE4F71400D8FAC8 /* ImperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2F48CA2AE4F71400D8FAC8 /* ImperView.swift */; };
 		7D3AFC762AB15993003AE049 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7D3AFC752AB15933003AE049 /* .swiftlint.yml */; };
 		7D5020C82AF1E43B004B6312 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5020C72AF1E43B004B6312 /* Color.swift */; };
@@ -92,7 +92,7 @@
 		7D0A95112AD7C90C00F6836D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D0A95212ADC30B500F6836D /* ImperMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImperMainView.swift; sourceTree = "<group>"; };
 		7D1077462AF6861B001C6746 /* TodayMensInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMensInfoView.swift; sourceTree = "<group>"; };
-		7D10774C2AF68910001C6746 /* NextMensInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextMensInfoView.swift; sourceTree = "<group>"; };
+		7D10774E2AF68C45001C6746 /* NextMensInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextMensInfoView.swift; sourceTree = "<group>"; };
 		7D2F48CA2AE4F71400D8FAC8 /* ImperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImperView.swift; sourceTree = "<group>"; };
 		7D3AFC752AB15933003AE049 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		7D5020C72AF1E43B004B6312 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -293,7 +293,7 @@
 				DE7697952AF2560100AE4FA9 /* AdminNewCardView.swift */,
 				DE7697972AF2560900AE4FA9 /* AdminMMSView.swift */,
 				7D1077462AF6861B001C6746 /* TodayMensInfoView.swift */,
-				7D10774C2AF68910001C6746 /* NextMensInfoView.swift */,
+				7D10774E2AF68C45001C6746 /* NextMensInfoView.swift */,
 			);
 			path = AdminViews;
 			sourceTree = "<group>";
@@ -501,7 +501,7 @@
 				DE7697742AF253AE00AE4FA9 /* LogInView.swift in Sources */,
 				7D0A95222ADC30B500F6836D /* ImperMainView.swift in Sources */,
 				8E1DB0AE2AE4F522008DAD0F /* LoginTypeView.swift in Sources */,
-				7D10774D2AF68910001C6746 /* NextMensInfoView.swift in Sources */,
+				7D10774F2AF68C45001C6746 /* NextMensInfoView.swift in Sources */,
 				7D2F48CB2AE4F71400D8FAC8 /* ImperView.swift in Sources */,
 				DE7697982AF2560900AE4FA9 /* AdminMMSView.swift in Sources */,
 				DE76978C2AF2555500AE4FA9 /* AdminAlarmListView.swift in Sources */,
