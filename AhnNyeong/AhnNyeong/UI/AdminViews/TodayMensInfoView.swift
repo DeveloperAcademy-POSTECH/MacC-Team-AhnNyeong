@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TodayMensInfoView: View {
     var title: String
+    var mensDataCount = 10
     let column = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
         HStack {
@@ -16,25 +17,34 @@ struct TodayMensInfoView: View {
                 Text(title)
                     .bold24White50()
                 HStack(spacing: 10) {
-                    LazyVGrid(columns: column, spacing: 10, content: {
-                        ForEach(0..<7) { _ in
-                            HStack {
-                                VStack(alignment: .leading, spacing: 5) {
-                                    Text("김이최박생리")
-                                        .medium16Black500()
-                                    HStack(spacing: 5) {
-                                        Image("DropFill")
-                                        Text("1일째")
-                                            .medium16Black500()
-                                    }
-                                }
-                                Spacer()
-                            }
-                            .padding(10)
-                            .background(TodayMensInfoDetailBox())
-                            .frame(width: 102, height: 63)
+                    if mensDataCount == 0 {
+                        HStack {
+                            Text("오늘 생리 중인 사람이 없습니다.")
+                                .medium16White50()
+                                .frame(maxWidth: .infinity)
                         }
-                    })
+                        .padding(.vertical, 20)
+                    } else {
+                        LazyVGrid(columns: column, spacing: 10, content: {
+                            ForEach(0..<mensDataCount) { _ in
+                                HStack {
+                                    VStack(alignment: .leading, spacing: 5) {
+                                        Text("김이최박생리")
+                                            .medium16Black500()
+                                        HStack(spacing: 5) {
+                                            Image("DropFill")
+                                            Text("1일째")
+                                                .medium16Black500()
+                                        }
+                                    }
+                                    Spacer()
+                                }
+                                .padding(10)
+                                .background(TodayMensInfoDetailBox())
+                                .frame(width: 102, height: 63)
+                            }
+                        })
+                    }
                 }
             }
             Spacer()
