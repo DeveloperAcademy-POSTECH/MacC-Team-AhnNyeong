@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodayMensInfoView: View {
     var title: String
-    var mensDataCount = 10
+    var mensDataCount = 0
     let column = [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
         HStack {
@@ -18,12 +18,10 @@ struct TodayMensInfoView: View {
                     .bold24White50()
                 HStack(spacing: 10) {
                     if mensDataCount == 0 {
-                        HStack {
                             Text("오늘 생리 중인 사람이 없습니다.")
                                 .medium16White50()
                                 .frame(maxWidth: .infinity)
-                        }
-                        .padding(.vertical, 20)
+                                .padding(.vertical, 20)
                     } else {
                         LazyVGrid(columns: column, spacing: 10, content: {
                             ForEach(0..<mensDataCount) { _ in
