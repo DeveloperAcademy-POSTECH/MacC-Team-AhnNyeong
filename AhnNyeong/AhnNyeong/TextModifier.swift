@@ -39,6 +39,12 @@ extension Text {
     func medium12Black400() -> some View {
         modifier(Medium12Black400())
     }
+    func medium16White50() -> some View {
+        modifier(Medium16White50())
+    }
+    func medium16Black300() -> some View {
+        modifier(Medium16Black300())
+    }
     func medium16Black500() -> some View {
         modifier(Medium16Black500())
     }
@@ -220,6 +226,22 @@ struct Medium12Black400: ViewModifier {
         content
             .font(.system(size: 12, weight: .medium))
             .foregroundColor(.black400)
+    }
+}
+
+struct Medium16White50: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 16, weight: .medium))
+            .foregroundColor(.white50)
+    }
+}
+
+struct Medium16Black300: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 16, weight: .medium))
+            .foregroundColor(.black300)
     }
 }
 
