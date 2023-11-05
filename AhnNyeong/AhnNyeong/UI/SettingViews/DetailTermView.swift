@@ -27,7 +27,6 @@ struct DetailTermView: View {
     }
 }
 
-
 #Preview {
     DetailTermView(viewTitle: "약관 상세", termImg: "scribble")
 }
