@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NextMensInfoView: View {
     var title: String
+    var mensDataCount = 0
     let column = [GridItem(.flexible(), alignment: .top), GridItem(.flexible(), alignment: .top)]
     var body: some View {
         HStack {
@@ -16,83 +17,170 @@ struct NextMensInfoView: View {
                 Text(title)
                     .bold24Black300()
                 HStack(spacing: 10) {
-                    LazyVGrid(columns: column, spacing: 10, content: {
-                        HStack {
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text("김이최박생리")
-                                    .medium16Black500()
-                                HStack(spacing: 5) {
-                                    Image("Drop")
-                                    Text("D-1")
+                    if mensDataCount == 0 {
+                        Text("곧 생리 예정인 사람이 없습니다.")
+                            .medium16Black300()
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 20)
+                    } else {
+                        LazyVGrid(columns: column, spacing: 10, content: {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text("김이최박생리")
                                         .medium16Black500()
+                                    HStack(spacing: 5) {
+                                        Image("Drop")
+                                        Text("D-1")
+                                            .medium16Black500()
+                                    }
+                                    Group {
+                                        Text("과다월경")
+                                        Text("도전적 행동 주의")
+                                    }
+                                    .modifier(Regular12Black500())
+                                    .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+                                    .background(TagBackgroundView())
                                 }
-                                Group {
-                                    Text("과다월경")
-                                    Text("도전적 행동 주의")
-                                }
-                                .modifier(Regular12Black500())
-                                .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
-                                .background(TagBackgroundView())
+                                Spacer()
                             }
-                            Spacer()
-                        }
-                        .padding(10)
-                        .background(NextMensInfoDetailBox())
-                        HStack {
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text("김이최박생리")
-                                    .medium16Black500()
-                                HStack(spacing: 5) {
-                                    Image("Drop")
-                                    Text("D-3")
+                            .padding(10)
+                            .background(NextMensInfoDetailBox())
+                            HStack {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text("김이최박생리")
                                         .medium16Black500()
+                                    HStack(spacing: 5) {
+                                        Image("Drop")
+                                        Text("D-3")
+                                            .medium16Black500()
+                                    }
+                                    Group {
+                                        Text("불규칙한 주기")
+                                    }
+                                    .modifier(Regular12Black500())
+                                    .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+                                    .background(TagBackgroundView())
                                 }
-                                Group {
-                                    Text("불규칙한 주기")
-                                }
-                                .modifier(Regular12Black500())
-                                .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
-                                .background(TagBackgroundView())
+                                Spacer()
                             }
-                            Spacer()
-                        }
-                        .padding(10)
-                        .background(NextMensInfoDetailBox())
-                        HStack {
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text("김이최박생리")
-                                    .medium16Black500()
-                                HStack(spacing: 5) {
-                                    Image("Drop")
-                                    Text("D-5")
+                            .padding(10)
+                            .background(NextMensInfoDetailBox())
+                            HStack {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text("김이최박생리")
                                         .medium16Black500()
+                                    HStack(spacing: 5) {
+                                        Image("Drop")
+                                        Text("D-5")
+                                            .medium16Black500()
+                                    }
                                 }
+                                Spacer()
                             }
-                            Spacer()
-                        }
-                        .padding(10)
-                        .background(NextMensInfoDetailBox())
-                        HStack {
-                            VStack(alignment: .leading, spacing: 5) {
-                                Text("김이최박생리")
-                                    .medium16Black500()
-                                HStack(spacing: 5) {
-                                    Image("Drop")
-                                    Text("D-7")
+                            .padding(10)
+                            .background(NextMensInfoDetailBox())
+                            HStack {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text("김이최박생리")
                                         .medium16Black500()
+                                    HStack(spacing: 5) {
+                                        Image("Drop")
+                                        Text("D-7")
+                                            .medium16Black500()
+                                    }
+                                    Group {
+                                        Text("과다월경")
+                                    }
+                                    .modifier(Regular12Black500())
+                                    .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+                                    .background(TagBackgroundView())
                                 }
-                                Group {
-                                    Text("과다월경")
-                                }
-                                .modifier(Regular12Black500())
-                                .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
-                                .background(TagBackgroundView())
+                                Spacer()
                             }
-                            Spacer()
-                        }
-                        .padding(10)
-                        .background(NextMensInfoDetailBox())
-                    })
+                            .padding(10)
+                            .background(NextMensInfoDetailBox())
+                            HStack {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text("김이최박생리")
+                                        .medium16Black500()
+                                    HStack(spacing: 5) {
+                                        Image("Drop")
+                                        Text("D-7")
+                                            .medium16Black500()
+                                    }
+                                    Group {
+                                        Text("과다월경")
+                                    }
+                                    .modifier(Regular12Black500())
+                                    .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+                                    .background(TagBackgroundView())
+                                }
+                                Spacer()
+                            }
+                            .padding(10)
+                            .background(NextMensInfoDetailBox())
+                            HStack {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text("김이최박생리")
+                                        .medium16Black500()
+                                    HStack(spacing: 5) {
+                                        Image("Drop")
+                                        Text("D-7")
+                                            .medium16Black500()
+                                    }
+                                    Group {
+                                        Text("과다월경")
+                                    }
+                                    .modifier(Regular12Black500())
+                                    .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+                                    .background(TagBackgroundView())
+                                }
+                                Spacer()
+                            }
+                            .padding(10)
+                            .background(NextMensInfoDetailBox())
+                            HStack {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text("김이최박생리")
+                                        .medium16Black500()
+                                    HStack(spacing: 5) {
+                                        Image("Drop")
+                                        Text("D-7")
+                                            .medium16Black500()
+                                    }
+                                    Group {
+                                        Text("과다월경")
+                                    }
+                                    .modifier(Regular12Black500())
+                                    .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+                                    .background(TagBackgroundView())
+                                }
+                                Spacer()
+                            }
+                            .padding(10)
+                            .background(NextMensInfoDetailBox())
+                            HStack {
+                                VStack(alignment: .leading, spacing: 5) {
+                                    Text("김이최박생리")
+                                        .medium16Black500()
+                                    HStack(spacing: 5) {
+                                        Image("Drop")
+                                        Text("D-7")
+                                            .medium16Black500()
+                                    }
+                                    Group {
+                                        Text("과다월경")
+                                    }
+                                    .modifier(Regular12Black500())
+                                    .padding(EdgeInsets(top: 2, leading: 4, bottom: 2, trailing: 4))
+                                    .background(TagBackgroundView())
+                                }
+                                Spacer()
+                            }
+                            .padding(10)
+                            .background(NextMensInfoDetailBox())
+                        })
+                    }
                 }
             }
             Spacer()
