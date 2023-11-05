@@ -58,7 +58,7 @@ struct ChosenHereView: View {
 }
 struct ConnectedView: View {
     var body: some View {
-        Text("hi")
+        TargetFrameView()
     }
 }
 struct WaitingView: View {
@@ -67,7 +67,32 @@ struct WaitingView: View {
     }
 }
 
+// MARK: - TargetFrame Layout
+struct TargetFrameView: View {
+//    var TargetName: String
+//    var TargetAge: String
+    var body: some View {
+        Image("TargetFrame")
+            .overlay {
+                VStack {
+                   Rectangle()
+                        .frame(width: 150, height: 29)
+                        .cornerRadius(40)
+                        .foregroundColor(.coral100)
+                        .overlay {
+                            Text("김생리A")
+                                .semiBold18Black500()
+                        }
+                    Text("만 33세")
+                        .regular18Black75()
+//                    Text("만 \(TargetAge)세")
+                }
+            }
+    }
+}
+
 
 #Preview {
     AdminMngView()
 }
+

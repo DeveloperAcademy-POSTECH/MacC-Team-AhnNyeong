@@ -17,6 +17,9 @@ struct TextModifier: View {
 // MARK: - Weight(Regular/Medium/SemiBold/Bold/Heavy) + Size(12 to 32) + Color (Coral/Black/White)
 extension Text {
     // MARK: - Regular
+    func regular16Black500() -> some View {
+        modifier(Regular16Black500())
+    }
     func regular17Coral500() -> some View {
         modifier(Regular17Coral500())
     }
@@ -167,6 +170,15 @@ extension Text {
     }
 }
 
+// MARK: - Regular Struct
+struct Regular16Black500: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 16, weight: .regular))
+            .foregroundColor(.black500)
+    }
+}
+
 struct Regular17Coral500: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -199,6 +211,7 @@ struct Regular26Coral500: ViewModifier {
     }
 }
 
+// MARK: - Medium Struct
 struct Medium12Black300: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -239,6 +252,7 @@ struct Medium22Black400: ViewModifier {
     }
 }
 
+// MARK: - SemiBold Struct
 struct SemiBold12Black200: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -407,6 +421,7 @@ struct SemiBold32Black400: ViewModifier {
     }
 }
 
+// MARK: - Bold Struct
 struct Bold14Black300: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -543,6 +558,7 @@ struct Bold30Coral500: ViewModifier {
     }
 }
 
+// MARK: - Heavy Struct
 struct Heavy32Black400: ViewModifier {
     func body(content: Content) -> some View {
         content
