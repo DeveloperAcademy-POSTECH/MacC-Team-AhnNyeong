@@ -50,10 +50,9 @@ struct AdminMainView: View {
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
                         Button(action: {
-                            //
+                            // TODO: - AdminAlarmListView 모달로 출력
                         }, label: {
-                            Image(systemName: "bell")
-                                .foregroundColor(Color.coral500)
+                            ToolbarBellView(badgeCnt: 999)
                         })
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
