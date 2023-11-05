@@ -13,7 +13,7 @@ struct AdminMainView: View {
             MensStatusView(selectedUserType: .constant(.notyet))
                 .tabItem {
                     Image(systemName: "drop.fill")
-                    Text("생리현황")
+                    Text("생리 현황")
                 }
             AdminCalView()
                 .tabItem {
@@ -27,6 +27,7 @@ struct AdminMainView: View {
                 }
         }
         .font(.headline)
+        .accentColor(Color.coral500)
     }
 }
 
