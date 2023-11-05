@@ -26,8 +26,9 @@ struct SettingMainView: View {
                 HStack(spacing: 0) {
                     Image(systemName: selectedUserType == .mng ? "checkmark.seal.fill" : "person.2.fill")
                     Text(selectedUserType == .mng ? " 기관(\(instNm)) 인증됨" : " \(instNm) / \(mngNm) 사회복지사님")
+                        .bold16White50()
                 }
-                .font(.system(size: 12, weight: .light))
+                .font(.system(size: 16, weight: .bold))
                 .foregroundColor(Color.white50)
                 .padding(EdgeInsets(top: 5, leading: 10, bottom: 5, trailing: 10))
                 .background {
@@ -95,6 +96,7 @@ struct SettingMainView: View {
                     }
                 Spacer()
                 Text("문의하기")
+                    .semiBold16Black75()
                 Spacer()
             }
             .underline()
