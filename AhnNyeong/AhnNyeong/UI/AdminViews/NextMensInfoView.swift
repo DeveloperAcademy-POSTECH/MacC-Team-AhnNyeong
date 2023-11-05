@@ -31,7 +31,6 @@ struct NextMensInfoView: View {
                     }
                 }
             }
-            Spacer()
         }
         .padding(EdgeInsets(top: 20, leading: 16, bottom: 20, trailing: 16))
         .background(NextMensInfoBackground())
