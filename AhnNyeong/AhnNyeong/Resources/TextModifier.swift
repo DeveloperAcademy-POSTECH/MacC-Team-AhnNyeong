@@ -55,6 +55,9 @@ extension Text {
     func semiBold12White50() -> some View {
         modifier(SemiBold12White50())
     }
+    func semiBold14Black500() -> some View {
+        modifier(SemiBold14Black500())
+    }
     func semiBold15Black400() -> some View {
         modifier(SemiBold15Black400())
     }
@@ -257,6 +260,14 @@ struct SemiBold12White50: ViewModifier {
         content
             .font(.system(size: 12, weight: .semibold))
             .foregroundColor(.white50)
+    }
+}
+
+struct SemiBold14Black500: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 14, weight: .semibold))
+            .foregroundColor(.black500)
     }
 }
 
