@@ -13,6 +13,7 @@ struct AdminMngView: View {
         UISegmentedControl.appearance().setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 14, weight: .semibold)], for: .normal)
     }
     @State private var selectedSide: ConnectController = .connected
+    @State private var isContextMenuVisible = false
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -37,19 +38,17 @@ struct AdminMngView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
-                        // 버튼을 클릭할 때 실행할 액션을 정의
+                        // bell action 제레미 코드 받기
                     }) {
                         Image(systemName: "bell")
                             .foregroundColor(Color.coral500)
                     }
                 }
-                
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        // 다른 버튼의 액션 정의
+                        // context menu 액션 구현
                     }) {
                         Image(systemName: "ellipsis.circle")
-                            .frame(width: 29, height:30)
                             .foregroundColor(Color.coral500)
                     }
                 }

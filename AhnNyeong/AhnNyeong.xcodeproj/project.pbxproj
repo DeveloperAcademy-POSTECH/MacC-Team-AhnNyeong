@@ -84,6 +84,7 @@
 		DE7697B12AF25A1C00AE4FA9 /* SettingTermView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697B02AF25A1C00AE4FA9 /* SettingTermView.swift */; };
 		DE7697B42AF25AAA00AE4FA9 /* ModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697B32AF25AAA00AE4FA9 /* ModelTest.swift */; };
 		DEEBFF012AE4FD8D005098E3 /* ManagerViewForMVP.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEEBFF002AE4FD8D005098E3 /* ManagerViewForMVP.swift */; };
+		DEFF49A32AF790EF00E61D8D /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFF49A22AF790EF00E61D8D /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -132,6 +133,7 @@
 		DE7697B02AF25A1C00AE4FA9 /* SettingTermView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTermView.swift; sourceTree = "<group>"; };
 		DE7697B32AF25AAA00AE4FA9 /* ModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTest.swift; sourceTree = "<group>"; };
 		DEEBFF002AE4FD8D005098E3 /* ManagerViewForMVP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerViewForMVP.swift; sourceTree = "<group>"; };
+		DEFF49A22AF790EF00E61D8D /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 				DE7697932AF255CC00AE4FA9 /* AdminTagMemoView.swift */,
 				DE7697952AF2560100AE4FA9 /* AdminNewCardView.swift */,
 				DE7697972AF2560900AE4FA9 /* AdminMMSView.swift */,
+				DEFF49A22AF790EF00E61D8D /* Test.swift */,
 			);
 			path = AdminViews;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				DE76978C2AF2555500AE4FA9 /* AdminAlarmListView.swift in Sources */,
 				7D5376012ADD7C4E00D338D5 /* MensInfoStore.swift in Sources */,
 				DE7697802AF253FD00AE4FA9 /* TargetCalView.swift in Sources */,
+				DEFF49A32AF790EF00E61D8D /* Test.swift in Sources */,
 				8E7EB3562AF3A3CD00D07E25 /* DetailTermView.swift in Sources */,
 				DE7697882AF2552600AE4FA9 /* AdminCalModalView.swift in Sources */,
 				DE7697AB2AF259E400AE4FA9 /* SettingMainView.swift in Sources */,
@@ -635,6 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AhnNyeong/Preview Content\"";
+				DEVELOPMENT_TEAM = GPA5CUM32W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -663,6 +668,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AhnNyeong/Preview Content\"";
+				DEVELOPMENT_TEAM = GPA5CUM32W;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
