@@ -15,11 +15,11 @@ struct AdminMngView: View {
     @State private var selectedSide: ConnectController = .connected
     var body: some View {
         NavigationView {
-            ScrollView{
+            ScrollView {
                 VStack {
                     Text("개별 상세 정보를 열람, 수정할 수 있습니다.")
                         .medium14Black500()
-                        .padding(.trailing, 120)
+                        .padding(.trailing, 115)
                     VStack {
                         Picker("Choose a Side", selection: $selectedSide) {
                             ForEach(ConnectController.allCases, id: \.self) {
@@ -28,15 +28,31 @@ struct AdminMngView: View {
                         }
                         .pickerStyle(SegmentedPickerStyle())
                         .padding()
-                        Spacer()
                         ChosenHereView(selectedSide: selectedSide)
-                        Spacer()
                     }
                     .navigationTitle("이용자 리스트")
+//                    .toolbar {
+//                        ToolbarItem(placement: .topBarTrailing) {
+//                              Button(action: {
+//                                  // TODO: - AdminAlarmListView 모달로 출력
+//                              }, label: {
+////                                  ToolbarBellView(badgeCnt: 999)
+//                              })
+//                          }
+//                          ToolbarItem(placement: .navigationBarTrailing) {
+//                              Button(action: {
+//                                  self.showNew = true
+//                              }, label: {
+//                                  Image(systemName: "gearshape.fill")
+//                                      .foregroundColor(Color.coral500)
+//                              })
+//                          }
+//                      }
                 }
             }
             .background(Color.white300)
         }
+        
     }
 }
 
@@ -57,37 +73,90 @@ struct ChosenHereView: View {
     }
 }
 struct ConnectedView: View {
+    //targetName 데이터에 있는 값을 가져와서 그 개수만큼 보여줄 수 있도록 함.
+    @State private var connectTarget: [String] = ["Target 1", "Target 2", "Target 3", "Target 4", "Target5"]
+    var columns = [GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
-        TargetFrameView()
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(connectTarget, id: \.self) {i in
+                    TargetFrameForConnectedView()
+                        
+                }
+            }
+            .padding(.horizontal, 16)
+        }
     }
 }
 struct WaitingView: View {
+    //targetName 데이터에 있는 값을 가져와서 그 개수만큼 보여줄 수 있도록 함.
+    @State private var waitTarget: [String] = ["Target 1"]
+    var columns = [GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
-        Text("대기중")
+        ScrollView {
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(waitTarget, id: \.self) {i in
+                    TargetFrameForWaitingView()
+                }
+            }
+            .padding(.horizontal, 16)
+        }
     }
 }
 
 // MARK: - TargetFrame Layout
-struct TargetFrameView: View {
-//    var TargetName: String
+struct TargetFrameForConnectedView: View {
+//    차후에 사용할 상수
+//    var targetName: String
+//    var targetAge: String
+    var body: some View {
+        Button {
+            //누르면 specificview로 넘어가게
+        } label: {
+            Image("TargetFrame")
+                .overlay {
+                    VStack {
+                       Rectangle()
+                            .frame(width: 150, height: 29)
+                            .cornerRadius(40)
+                            .foregroundColor(.coral100)
+                            .overlay {
+                                Text("김생리A")
+//                                Text(\(targetName))
+                                    .semiBold18Black500()
+                            }
+                        Text("만 33세")
+                            .regular16Black500()
+//                        Text("만 \(TargetAge)세")
+                    }
+                }
+        }
+    }
+}
+struct TargetFrameForWaitingView: View {
+//    차후에 사용할 상수
+//    var targetName: String
 //    var TargetAge: String
     var body: some View {
-        Image("TargetFrame")
-            .overlay {
-                VStack {
-                   Rectangle()
-                        .frame(width: 150, height: 29)
-                        .cornerRadius(40)
-                        .foregroundColor(.coral100)
-                        .overlay {
-                            Text("김생리A")
-                                .semiBold18Black500()
-                        }
-                    Text("만 33세")
-                        .regular18Black75()
-//                    Text("만 \(TargetAge)세")
+        Button {
+            //누르면 specificview로 넘어가게
+        } label: {
+            Image("TargetFrame")
+                .overlay {
+                    VStack {
+                       Rectangle()
+                            .frame(width: 150, height: 29)
+                            .cornerRadius(40)
+                            .foregroundColor(.calToday)
+                            .overlay {
+                                Text("박생리")
+                                    .semiBold18Black500()
+                            }
+                        Text("이용자 확인 대기 중..")
+                            .regular16Black500()
+                    }
                 }
-            }
+        }
     }
 }
 
