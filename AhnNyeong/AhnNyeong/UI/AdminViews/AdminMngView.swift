@@ -14,7 +14,7 @@ struct AdminMngView: View {
     }
     @State private var selectedSide: ConnectController = .connected
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack {
                     Text("개별 상세 정보를 열람, 수정할 수 있습니다.")
@@ -30,29 +30,31 @@ struct AdminMngView: View {
                         .padding()
                         ChosenHereView(selectedSide: selectedSide)
                     }
-                    .navigationTitle("이용자 리스트")
-//                    .toolbar {
-//                        ToolbarItem(placement: .topBarTrailing) {
-//                              Button(action: {
-//                                  // TODO: - AdminAlarmListView 모달로 출력
-//                              }, label: {
-////                                  ToolbarBellView(badgeCnt: 999)
-//                              })
-//                          }
-//                          ToolbarItem(placement: .navigationBarTrailing) {
-//                              Button(action: {
-//                                  self.showNew = true
-//                              }, label: {
-//                                  Image(systemName: "gearshape.fill")
-//                                      .foregroundColor(Color.coral500)
-//                              })
-//                          }
-//                      }
                 }
             }
             .background(Color.white300)
+            .navigationTitle("이용자 리스트")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        // 버튼을 클릭할 때 실행할 액션을 정의
+                    }) {
+                        Image(systemName: "bell")
+                            .foregroundColor(Color.coral500)
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        // 다른 버튼의 액션 정의
+                    }) {
+                        Image(systemName: "ellipsis.circle")
+                            .frame(width: 29, height:30)
+                            .foregroundColor(Color.coral500)
+                    }
+                }
+            }
         }
-        
     }
 }
 
@@ -79,9 +81,8 @@ struct ConnectedView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(connectTarget, id: \.self) {i in
+                ForEach(connectTarget, id: \.self) {items in
                     TargetFrameForConnectedView()
-                        
                 }
             }
             .padding(.horizontal, 16)
@@ -95,7 +96,7 @@ struct WaitingView: View {
     var body: some View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {
-                ForEach(waitTarget, id: \.self) {i in
+                ForEach(waitTarget, id: \.self) {items in
                     TargetFrameForWaitingView()
                 }
             }
@@ -147,7 +148,8 @@ struct TargetFrameForWaitingView: View {
                        Rectangle()
                             .frame(width: 150, height: 29)
                             .cornerRadius(40)
-                            .foregroundColor(.calToday)
+                            .foregroundColor(.coral100)
+                            .opacity(0.7)
                             .overlay {
                                 Text("박생리")
                                     .semiBold18Black500()
