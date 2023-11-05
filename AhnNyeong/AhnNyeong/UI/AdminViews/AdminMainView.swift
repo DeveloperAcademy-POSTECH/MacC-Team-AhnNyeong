@@ -8,6 +8,29 @@
 import SwiftUI
 
 struct AdminMainView: View {
+    var body: some View {
+        TabView {
+            MensStatusView(selectedUserType: .constant(.notyet))
+                .tabItem {
+                    Image(systemName: "drop.fill")
+                    Text("생리현황")
+                }
+            AdminCalView()
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("달력")
+                }
+            AdminMngView()
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("이용자 리스트")
+                }
+        }
+        .font(.headline)
+    }
+}
+
+struct MensStatusView: View {
     @Binding var selectedUserType: ContentView.LoginType
     @State private var showNew = false
     @State private var checkMensNotStarted = false
@@ -20,16 +43,8 @@ struct AdminMainView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
-//                    HStack {
-//                        VStack(alignment: .leading) {
-//                            Text("2023년")
-//                                .medium22Black500()
-//                            Text("\(dateformat.string(from: Date()))")
-//                                .bold28Black500()
-//                        }
-//                        Spacer()
-//                    }
                     TodayMensInfoView(title: "오늘 생리 중")
+                        .padding(.top, 10)
                         .onAppear {
                             // if 생리 시작 입력이 예정일로부터 14일간 입력되지 않은 사람이 있으면
                             checkMensNotStarted = true
@@ -66,7 +81,6 @@ struct AdminMainView: View {
                 }
                 .navigationDestination(isPresented: $showNew) { SettingMainView(selectedUserType: $selectedUserType, userName: "이김생리")
                 }
-                .navigationBarTitleDisplayMode(.inline)
                 .navigationTitle(Text("\(dateformat.string(from: Date()))"))
             }
             .background(Color.white300)
@@ -75,5 +89,5 @@ struct AdminMainView: View {
 }
 
 #Preview {
-    AdminMainView(selectedUserType: .constant(.notyet))
+    AdminMainView()
 }
