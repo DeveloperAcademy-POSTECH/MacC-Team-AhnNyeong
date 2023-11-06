@@ -9,7 +9,7 @@ import SwiftUI
 
 extension Color {
     
-    //MARK: - Coral Color
+    // MARK: - Coral Color
     static let coral50 = Color(.coral50)
     static let coral100 = Color(.coral100)
     static let coral200 = Color(.coral200)
@@ -21,7 +21,7 @@ extension Color {
     static let coral800 = Color(.coral800)
     static let coral900 = Color(.coral900)
     
-    //MARK: - White Color
+    // MARK: - White Color
     static let white50 = Color(.white50)
     static let white75 = Color(.white75)
     static let white100 = Color(.white100)
@@ -30,7 +30,7 @@ extension Color {
     static let white400 = Color(.white400)
     static let white500 = Color(.white500)
     
-    //MARK: - Black Color
+    // MARK: - Black Color
     static let black50 = Color(.black50)
     static let black75 = Color(.black75)
     static let black100 = Color(.black100)
@@ -39,8 +39,11 @@ extension Color {
     static let black400 = Color(.black400)
     static let black500 = Color(.black500)
     
-    //MARK: - for Calendar Color
+    // MARK: - for Calendar Color
     static let calWeekday = Color(.calWeekday)
     static let calToday = Color(.calToday)
+    
+    // MARK: - 이용자리스트 대기 중 상태일 때 Color
+    static let purple50 = Color(.purple50)
     
 }

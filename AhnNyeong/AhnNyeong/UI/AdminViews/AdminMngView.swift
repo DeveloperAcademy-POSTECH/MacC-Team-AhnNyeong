@@ -147,22 +147,20 @@ struct TargetFrameForWaitingView: View {
                        Rectangle()
                             .frame(width: 150, height: 29)
                             .cornerRadius(40)
-                            .foregroundColor(.coral100)
+                            .foregroundColor(.purple50)
                             .opacity(0.7)
                             .overlay {
                                 Text("박생리")
-                                    .semiBold18Black500()
+                                    .semiBold18Black200()
                             }
                         Text("이용자 확인 대기 중..")
-                            .regular16Black500()
+                            .regular16Black200()
                     }
                 }
         }
     }
 }
 
-
 #Preview {
     AdminMngView()
 }
-
