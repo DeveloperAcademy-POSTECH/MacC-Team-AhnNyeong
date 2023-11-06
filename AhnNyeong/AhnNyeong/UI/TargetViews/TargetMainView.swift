@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct TargetMainView: View {
     @State var startDefaultBtnClick = false
@@ -14,7 +15,6 @@ struct TargetMainView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.white300.ignoresSafeArea(.all)
                 VStack(spacing: 0) {
                     HStack {
                         VStack(alignment: .leading) {
@@ -62,6 +62,15 @@ struct TargetMainView: View {
                 .navigationDestination(isPresented: $calendarBtnClick) {
                     TargetMainView()
                 }
+                .background(Color.white300)
+                LottieView(animation: .named("Confetti_01"))
+                    .resizable()
+                    .configure { lottieAnimationView in
+                        lottieAnimationView.contentMode = .scaleToFill
+                    }
+                    .playing()
+                    .ignoresSafeArea()
+
             }
         }
     }
