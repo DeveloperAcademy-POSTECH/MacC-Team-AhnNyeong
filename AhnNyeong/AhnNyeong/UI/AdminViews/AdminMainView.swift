@@ -9,7 +9,28 @@ import SwiftUI
 
 struct AdminMainView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            MensStatusView(selectedUserType: .constant(.notyet))
+                .tabItem {
+                    Image(systemName: "drop.fill")
+                    Text("생리 현황")
+                }
+                .toolbarBackground(Color.white300, for: .tabBar)
+            AdminCalView()
+                .tabItem {
+                    Image(systemName: "calendar")
+                    Text("달력")
+                }
+                .toolbarBackground(Color.white300, for: .tabBar)
+            AdminMngView()
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    Text("이용자 리스트")
+                }
+                .toolbarBackground(Color.white300, for: .tabBar)
+        }
+        .font(.headline)
+        .accentColor(Color.coral500)
     }
 }
 

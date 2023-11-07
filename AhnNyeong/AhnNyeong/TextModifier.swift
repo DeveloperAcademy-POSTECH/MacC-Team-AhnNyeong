@@ -17,6 +17,9 @@ struct TextModifier: View {
 // MARK: - Weight(Regular/Medium/SemiBold/Bold/Heavy) + Size(12 to 32) + Color (Coral/Black/White)
 extension Text {
     // MARK: - Regular
+    func regular12Black500() -> some View {
+        modifier(Regular12Black500())
+    }
     func regular17Coral500() -> some View {
         modifier(Regular17Coral500())
     }
@@ -36,11 +39,17 @@ extension Text {
     func medium12Black400() -> some View {
         modifier(Medium12Black400())
     }
+    func medium16White50() -> some View {
+        modifier(Medium16White50())
+    }
+    func medium16Black300() -> some View {
+        modifier(Medium16Black300())
+    }
     func medium16Black500() -> some View {
         modifier(Medium16Black500())
     }
-    func medium22Black400() -> some View {
-        modifier(Medium22Black400())
+    func medium22Black500() -> some View {
+        modifier(Medium22Black500())
     }
     // MARK: - SemiBold
     func semiBold12Black200() -> some View {
@@ -137,6 +146,9 @@ extension Text {
     func bold24White50() -> some View {
         modifier(Bold24White50())
     }
+    func bold24Black300() -> some View {
+        modifier(Bold24Black300())
+    }
     func bold24Black400() -> some View {
         modifier(Bold24Black400())
     }
@@ -158,6 +170,14 @@ extension Text {
     // MARK: - Heavy
     func heavy32Black400() -> some View {
         modifier(Heavy32Black400())
+    }
+}
+
+struct Regular12Black500: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 12, weight: .regular))
+            .foregroundColor(.black500)
     }
 }
 
@@ -209,6 +229,22 @@ struct Medium12Black400: ViewModifier {
     }
 }
 
+struct Medium16White50: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 16, weight: .medium))
+            .foregroundColor(.white50)
+    }
+}
+
+struct Medium16Black300: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 16, weight: .medium))
+            .foregroundColor(.black300)
+    }
+}
+
 struct Medium16Black500: ViewModifier {
     func body(content: Content) -> some View {
         content
@@ -217,7 +253,7 @@ struct Medium16Black500: ViewModifier {
     }
 }
 
-struct Medium22Black400: ViewModifier {
+struct Medium22Black500: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.system(size: 22, weight: .medium))
@@ -470,6 +506,14 @@ struct Bold24White50: ViewModifier {
         content
             .font(.system(size: 24, weight: .bold))
             .foregroundColor(.white50)
+    }
+}
+
+struct Bold24Black300: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 24, weight: .bold))
+            .foregroundColor(.black300)
     }
 }
 

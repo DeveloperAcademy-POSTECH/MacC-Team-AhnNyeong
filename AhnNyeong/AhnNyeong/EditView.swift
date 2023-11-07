@@ -18,7 +18,7 @@ struct EditView: View {
             }
             .padding()
             
-            Button  {
+            Button {
                 let editMensInfo = MensInfo(
                     id: selectedMensInfo.id,
                     imperID: selectedMensInfo.imperID,

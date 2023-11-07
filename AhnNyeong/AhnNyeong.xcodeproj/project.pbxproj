@@ -15,6 +15,10 @@
 		7D0A951D2AD7CAE500F6836D /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 7D0A951C2AD7CAE500F6836D /* FirebaseMessaging */; };
 		7D0A951F2AD7CAE500F6836D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7D0A951E2AD7CAE500F6836D /* FirebaseStorage */; };
 		7D0A95222ADC30B500F6836D /* ImperMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0A95212ADC30B500F6836D /* ImperMainView.swift */; };
+		7D1077472AF6861B001C6746 /* TodayMensInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1077462AF6861B001C6746 /* TodayMensInfoView.swift */; };
+		7D10774F2AF68C45001C6746 /* NextMensInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D10774E2AF68C45001C6746 /* NextMensInfoView.swift */; };
+		7D1C8B232AF6A1AF00C0311A /* SampleAdminCalModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C8B222AF6A1AF00C0311A /* SampleAdminCalModalView.swift */; };
+		7D1C8B252AF75B0500C0311A /* ToolbarBellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D1C8B242AF75B0500C0311A /* ToolbarBellView.swift */; };
 		7D2F48CB2AE4F71400D8FAC8 /* ImperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2F48CA2AE4F71400D8FAC8 /* ImperView.swift */; };
 		7D3AFC762AB15993003AE049 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 7D3AFC752AB15933003AE049 /* .swiftlint.yml */; };
 		7D5020C82AF1E43B004B6312 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5020C72AF1E43B004B6312 /* Color.swift */; };
@@ -49,6 +53,10 @@
 		7D5376392AE01D6C00D338D5 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7D5376382AE01D6C00D338D5 /* FirebaseRemoteConfigSwift */; };
 		7D53763B2AE01D6C00D338D5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7D53763A2AE01D6C00D338D5 /* FirebaseStorage */; };
 		7D53763D2AE01D6C00D338D5 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 7D53763C2AE01D6C00D338D5 /* FirebaseStorageCombine-Community */; };
+		7D9115ED2AF787E0000A84AA /* MensStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9115EC2AF787E0000A84AA /* MensStatusView.swift */; };
+		7DDB73E32AF7E3D400F66F00 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7DDB73E22AF7E3D400F66F00 /* Lottie */; };
+		7DDB73E92AF7E62A00F66F00 /* Confetti_01.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DDB73E82AF7E62A00F66F00 /* Confetti_01.json */; };
+		7DDB73EB2AF7E63000F66F00 /* Confetti_02.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DDB73EA2AF7E63000F66F00 /* Confetti_02.json */; };
 		7DF11C272AB03D8E005C0AE3 /* AhnNyeongApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF11C262AB03D8E005C0AE3 /* AhnNyeongApp.swift */; };
 		7DF11C292AB03D8E005C0AE3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF11C282AB03D8E005C0AE3 /* ContentView.swift */; };
 		7DF11C2B2AB03D8F005C0AE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */; };
@@ -89,6 +97,10 @@
 /* Begin PBXFileReference section */
 		7D0A95112AD7C90C00F6836D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7D0A95212ADC30B500F6836D /* ImperMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImperMainView.swift; sourceTree = "<group>"; };
+		7D1077462AF6861B001C6746 /* TodayMensInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayMensInfoView.swift; sourceTree = "<group>"; };
+		7D10774E2AF68C45001C6746 /* NextMensInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextMensInfoView.swift; sourceTree = "<group>"; };
+		7D1C8B222AF6A1AF00C0311A /* SampleAdminCalModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAdminCalModalView.swift; sourceTree = "<group>"; };
+		7D1C8B242AF75B0500C0311A /* ToolbarBellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarBellView.swift; sourceTree = "<group>"; };
 		7D2F48CA2AE4F71400D8FAC8 /* ImperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImperView.swift; sourceTree = "<group>"; };
 		7D3AFC752AB15933003AE049 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		7D5020C72AF1E43B004B6312 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
@@ -96,6 +108,9 @@
 		7D5375FE2ADD63DF00D338D5 /* MensInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensInfo.swift; sourceTree = "<group>"; };
 		7D5376002ADD7C4E00D338D5 /* MensInfoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensInfoStore.swift; sourceTree = "<group>"; };
 		7D5376062AE0166200D338D5 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		7D9115EC2AF787E0000A84AA /* MensStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensStatusView.swift; sourceTree = "<group>"; };
+		7DDB73E82AF7E62A00F66F00 /* Confetti_01.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Confetti_01.json; path = "../../../../../../Downloads/Confetti-2/Confetti_01.json"; sourceTree = "<group>"; };
+		7DDB73EA2AF7E63000F66F00 /* Confetti_02.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Confetti_02.json; path = "../../../../../../Downloads/Confetti-2/Confetti_02.json"; sourceTree = "<group>"; };
 		7DF11C232AB03D8E005C0AE3 /* AhnNyeong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AhnNyeong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DF11C262AB03D8E005C0AE3 /* AhnNyeongApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AhnNyeongApp.swift; sourceTree = "<group>"; };
 		7DF11C282AB03D8E005C0AE3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -162,6 +177,7 @@
 				7D5376332AE01D6C00D338D5 /* FirebaseMessaging in Frameworks */,
 				7D0A951F2AD7CAE500F6836D /* FirebaseStorage in Frameworks */,
 				7D53763D2AE01D6C00D338D5 /* FirebaseStorageCombine-Community in Frameworks */,
+				7DDB73E32AF7E3D400F66F00 /* Lottie in Frameworks */,
 				7D5376232AE01D6C00D338D5 /* FirebaseFirestoreCombine-Community in Frameworks */,
 				7D53762D2AE01D6C00D338D5 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
 				7D53760B2AE01D6C00D338D5 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
@@ -269,6 +285,8 @@
 		DE76976F2AF2530C00AE4FA9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7DDB73EA2AF7E63000F66F00 /* Confetti_02.json */,
+				7DDB73E82AF7E62A00F66F00 /* Confetti_01.json */,
 				7DF11C2A2AB03D8F005C0AE3 /* Assets.xcassets */,
 				7D5020C72AF1E43B004B6312 /* Color.swift */,
 			);
@@ -288,6 +306,11 @@
 				DE7697932AF255CC00AE4FA9 /* AdminTagMemoView.swift */,
 				DE7697952AF2560100AE4FA9 /* AdminNewCardView.swift */,
 				DE7697972AF2560900AE4FA9 /* AdminMMSView.swift */,
+				7D1077462AF6861B001C6746 /* TodayMensInfoView.swift */,
+				7D10774E2AF68C45001C6746 /* NextMensInfoView.swift */,
+				7D1C8B222AF6A1AF00C0311A /* SampleAdminCalModalView.swift */,
+				7D1C8B242AF75B0500C0311A /* ToolbarBellView.swift */,
+				7D9115EC2AF787E0000A84AA /* MensStatusView.swift */,
 			);
 			path = AdminViews;
 			sourceTree = "<group>";
@@ -384,6 +407,7 @@
 				7D5376382AE01D6C00D338D5 /* FirebaseRemoteConfigSwift */,
 				7D53763A2AE01D6C00D338D5 /* FirebaseStorage */,
 				7D53763C2AE01D6C00D338D5 /* FirebaseStorageCombine-Community */,
+				7DDB73E22AF7E3D400F66F00 /* Lottie */,
 			);
 			productName = AhnNyeong;
 			productReference = 7DF11C232AB03D8E005C0AE3 /* AhnNyeong.app */;
@@ -416,6 +440,7 @@
 			mainGroup = 7DF11C1A2AB03D8E005C0AE3;
 			packageReferences = (
 				7D0A95132AD7CAE500F6836D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				7DDB73E12AF7E3D400F66F00 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 7DF11C242AB03D8E005C0AE3 /* Products */;
 			projectDirPath = "";
@@ -433,6 +458,8 @@
 			files = (
 				7D3AFC762AB15993003AE049 /* .swiftlint.yml in Resources */,
 				7D0A95122AD7C90C00F6836D /* GoogleService-Info.plist in Resources */,
+				7DDB73E92AF7E62A00F66F00 /* Confetti_01.json in Resources */,
+				7DDB73EB2AF7E63000F66F00 /* Confetti_02.json in Resources */,
 				7DF11C2E2AB03D8F005C0AE3 /* Preview Assets.xcassets in Resources */,
 				7DF11C2B2AB03D8F005C0AE3 /* Assets.xcassets in Resources */,
 			);
@@ -480,6 +507,7 @@
 				DE76978A2AF2554500AE4FA9 /* AdminMainView.swift in Sources */,
 				DE7697922AF255C000AE4FA9 /* AdminSpecificHistoryModalView.swift in Sources */,
 				7D5376072AE0166200D338D5 /* EditView.swift in Sources */,
+				7D1077472AF6861B001C6746 /* TodayMensInfoView.swift in Sources */,
 				DE7697942AF255CC00AE4FA9 /* AdminTagMemoView.swift in Sources */,
 				8E7EB3602AF4972600D07E25 /* GestureModifier.swift in Sources */,
 				DE7697902AF255AC00AE4FA9 /* AdminSpecificView.swift in Sources */,
@@ -494,13 +522,17 @@
 				DE7697742AF253AE00AE4FA9 /* LogInView.swift in Sources */,
 				7D0A95222ADC30B500F6836D /* ImperMainView.swift in Sources */,
 				8E1DB0AE2AE4F522008DAD0F /* LoginTypeView.swift in Sources */,
+				7D10774F2AF68C45001C6746 /* NextMensInfoView.swift in Sources */,
+				7D9115ED2AF787E0000A84AA /* MensStatusView.swift in Sources */,
 				7D2F48CB2AE4F71400D8FAC8 /* ImperView.swift in Sources */,
 				DE7697982AF2560900AE4FA9 /* AdminMMSView.swift in Sources */,
 				DE76978C2AF2555500AE4FA9 /* AdminAlarmListView.swift in Sources */,
+				7D1C8B232AF6A1AF00C0311A /* SampleAdminCalModalView.swift in Sources */,
 				7D5376012ADD7C4E00D338D5 /* MensInfoStore.swift in Sources */,
 				DE7697802AF253FD00AE4FA9 /* TargetCalView.swift in Sources */,
 				8E7EB3562AF3A3CD00D07E25 /* DetailTermView.swift in Sources */,
 				DE7697882AF2552600AE4FA9 /* AdminCalModalView.swift in Sources */,
+				7D1C8B252AF75B0500C0311A /* ToolbarBellView.swift in Sources */,
 				DE7697AB2AF259E400AE4FA9 /* SettingMainView.swift in Sources */,
 				DE7697782AF253C600AE4FA9 /* StartRegiView.swift in Sources */,
 				DE76977C2AF253D400AE4FA9 /* RegiCompView.swift in Sources */,
@@ -715,6 +747,14 @@
 				minimumVersion = 10.16.0;
 			};
 		};
+		7DDB73E12AF7E3D400F66F00 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -882,6 +922,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7D0A95132AD7CAE500F6836D /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		7DDB73E22AF7E3D400F66F00 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DDB73E12AF7E3D400F66F00 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
