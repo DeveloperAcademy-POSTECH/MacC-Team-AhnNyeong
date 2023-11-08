@@ -12,6 +12,7 @@ struct TargetMainView: View {
     @State var startDefaultBtnClick = false
     @State var calendarBtnClick = false
     @State var toSympView = false
+    @State var isLottieViewDone = false
     var body: some View {
         NavigationStack {
             ZStack {
@@ -63,14 +64,18 @@ struct TargetMainView: View {
                     TargetMainView()
                 }
                 .background(Color.white300)
+                .zIndex(isLottieViewDone ? 9 : 0)
                 LottieView(animation: .named("Confetti_01"))
                     .resizable()
                     .configure { lottieAnimationView in
-                        lottieAnimationView.contentMode = .scaleToFill
+                        lottieAnimationView.contentMode = .scaleAspectFill
+                        lottieAnimationView.animationSpeed = 1.5
                     }
                     .playing()
+                    .animationDidFinish { _ in
+                        self.isLottieViewDone = true
+                    }
                     .ignoresSafeArea()
-
             }
         }
     }
