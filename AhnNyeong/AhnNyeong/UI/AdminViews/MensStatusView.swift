@@ -56,6 +56,7 @@ struct MensStatusView: View {
                         })
                     }
                 }
+                .toolbarBackground(Color.white300, for: .navigationBar)
                 .navigationDestination(isPresented: $showNew) { SettingMainView(selectedUserType: $selectedUserType, userName: "이김생리")
                 }
                 .navigationTitle(Text("\(dateformat.string(from: Date()))"))
