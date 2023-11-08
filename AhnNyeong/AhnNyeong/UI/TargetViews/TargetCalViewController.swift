@@ -1,9 +1,11 @@
 //
-//  AdminCalViewController.swift
+//  TargetCalViewController.swift
 //  AhnNyeong
 //
-//  Created by OhSuhyun on 2023.11.08.
+//  Created by OhSuhyun on 2023.11.09.
 //
+
+import SwiftUI
 
 import SwiftUI
 import UIKit
@@ -11,7 +13,7 @@ import FSCalendar
 import SnapKit
 import Then
 
-class AdminCalViewController: UIViewController, FSCalendarDelegate {
+class TargetCalViewController: UIViewController, FSCalendarDelegate {
     let coral500 = UIColor(red: 255/255, green: 84/255, blue: 61/255, alpha: 1) // coral500
     let black500 = UIColor(red: 31/255, green: 31/255, blue: 31/255, alpha: 1) // black500
     let black200 = UIColor(red: 86/255, green: 86/255, blue: 86/255, alpha: 1) // black200
@@ -25,7 +27,7 @@ class AdminCalViewController: UIViewController, FSCalendarDelegate {
 
     // MARK: - Property
     let headerDateFormatter = DateFormatter().then {
-        $0.dateFormat = "YYYY년 MM월" // check -> userType
+        $0.dateFormat = "YYYY년 MM월 W주차" // check -> userType
         $0.locale = Locale(identifier: "ko_kr")
         $0.timeZone = TimeZone(identifier: "KST")
     }
@@ -61,7 +63,8 @@ class AdminCalViewController: UIViewController, FSCalendarDelegate {
         $0.addTarget(self, action: #selector(tapNext), for: .touchUpInside)
     }
 
-    private lazy var headerLabel = UILabel().then {
+    private lazy var headerLabel = UILabel().then { [weak self] in
+        guard let self = self else { return }
         $0.font = .systemFont(ofSize: 22, weight: .bold)
         $0.textColor = black500
         $0.text = self.headerDateFormatter.string(from: Date())
@@ -82,11 +85,23 @@ class AdminCalViewController: UIViewController, FSCalendarDelegate {
         $0.backgroundColor = calyellow
     }
 
-    private lazy var colorLabel = UILabel().then {  [weak self] in
-        guard let self = self else { return }
+    private lazy var colorLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 12, weight: .regular)
         $0.textColor = black200
         $0.text = "오늘"
+    }
+
+    private lazy var dropIcon = UIImageView().then {
+        $0.image = UIImage(named: "CalDrop")    // sample
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.widthAnchor.constraint(equalToConstant: 12).isActive = true
+        $0.heightAnchor.constraint(equalToConstant: 16).isActive = true
+    }
+
+    private lazy var dropLabel = UILabel().then {
+        $0.font = .systemFont(ofSize: 12, weight: .regular)
+        $0.textColor = black200
+        $0.text = "예상 생리 기간"
     }
 
     override func viewDidLoad() {
@@ -98,7 +113,7 @@ class AdminCalViewController: UIViewController, FSCalendarDelegate {
 }
 
 // MARK: - FSCalendar
-extension AdminCalViewController: FSCalendarDataSource, FSCalendarDelegateAppearance {
+extension TargetCalViewController: FSCalendarDataSource, FSCalendarDelegateAppearance {
     func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
         calendarView.snp.updateConstraints {
             $0.height.equalTo(bounds.height)
@@ -174,6 +189,8 @@ extension AdminCalViewController: FSCalendarDataSource, FSCalendarDelegateAppear
             cell.layer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
             cell.layer.borderWidth = 0.0
         }
+        cell.layer.borderWidth = 0.5
+        cell.layer.borderColor = CGColor(red: 171/255, green: 171/255, blue: 171/255, alpha: 1)
 
         // 셀에 넣을 image 추가
         var iconName: String {
@@ -192,25 +209,14 @@ extension AdminCalViewController: FSCalendarDataSource, FSCalendarDelegateAppear
                 $0.tintColor = coral500
                 $0.translatesAutoresizingMaskIntoConstraints = true
             }
-            let cellImageLable = UILabel().then { [weak self] in
-                guard let self = self else { return }
-                $0.font = .systemFont(ofSize: 18, weight: .semibold)
-                $0.textColor = date > Date() ? coral500 : white50
-                $0.text = "\(date > Date() ? self.eventsArray.filter { $0 == date }.count :  self.eventsArrayDone.filter { $0 == date }.count)"
-                }
 
             cell.contentView.addSubview(cellImageView)
-            cellImageView.addSubview(cellImageLable)
 
             cellImageView.snp.makeConstraints {
-                $0.width.equalTo(cell.snp.width).offset(-8)
-                $0.height.equalTo(cell.snp.height).offset(-32)
-                $0.centerX.equalToSuperview()
-                $0.bottom.equalTo(cell.snp.bottom).offset(-4.0) // 물방울 위치 조정
-            }
-            cellImageLable.snp.makeConstraints {
-                $0.centerX.equalToSuperview()
-                $0.center.equalTo(cellImageView.snp.center).offset(4.0) // 숫자 레이블 위치 조정
+                $0.width.equalTo(15)
+                $0.height.equalTo(21)
+                $0.left.equalTo(cell.snp.left).offset(8.0)
+                $0.bottom.equalTo(cell.snp.bottom).offset(-8.0) // 물방울 위치 조정
             }
         } else {
             for subview in cell.contentView.subviews {
@@ -233,12 +239,12 @@ extension AdminCalViewController: FSCalendarDataSource, FSCalendarDelegateAppear
             calendarView.appearance.titleSelectionColor = black500
         }
 
-        return CGPoint(x: -8, y: -16)
+        return CGPoint(x: -8, y: -20)
     }
 }
 
 // MARK: - Method
-extension AdminCalViewController {
+extension TargetCalViewController {
     private func configureCalendar() {
         configureCalendarBasic()
         configureCalendarUI()
@@ -261,20 +267,18 @@ extension AdminCalViewController {
             $0.axis = .horizontal
             $0.spacing = 4.0
         }
+        let dropDescriptionView = UIStackView(arrangedSubviews: [dropIcon, dropLabel]).then {
+            $0.axis = .horizontal
+            $0.spacing = 4.0
+        }
 
-        [calendarView, calendarButtonStackView, todayButton, testLabel, selectedDateLabel, descriptionView].forEach { view.addSubview($0) }
+        [calendarButtonStackView, calendarView, descriptionView, dropDescriptionView].forEach { view.addSubview($0) }
 
         // MARK: - UI AutoLayout
         calendarButtonStackView.snp.makeConstraints {
             $0.top.equalTo(view.snp.top).offset(4.0)
             $0.centerX.equalToSuperview()
             $0.height.equalTo(28.0)
-        }
-        todayButton.snp.makeConstraints { // not completed -> sample
-            $0.width.equalTo(43)
-            $0.height.equalTo(25)
-            $0.centerY.equalTo(calendarButtonStackView)
-            $0.trailing.equalToSuperview()
         }
         calendarView.snp.makeConstraints {  // not completed -> sample
             $0.top.equalTo(calendarButtonStackView.snp.bottom).offset(8.0)
@@ -284,8 +288,14 @@ extension AdminCalViewController {
         }
 
         descriptionView.snp.makeConstraints {
-            $0.top.equalTo(calendarView.snp.bottom).offset(8.0)
-            $0.trailing.leading.equalToSuperview()
+            $0.top.equalTo(calendarView.snp.top).offset(116.0)
+            $0.leading.equalToSuperview()
+            $0.height.equalTo(16)
+        }
+
+        dropDescriptionView.snp.makeConstraints {
+            $0.top.equalTo(calendarView.snp.top).offset(116.0)
+            $0.trailing.equalToSuperview()
             $0.height.equalTo(16)
         }
     }
@@ -295,7 +305,7 @@ extension AdminCalViewController {
         calendarView.dataSource = self
         calendarView.select(Date())
         calendarView.locale = Locale(identifier: "ko_KR")
-        calendarView.scope = .month // 기본 달력 형태(월간/주간)
+        calendarView.scope = .week // 기본 달력 형태(월간/주간)
         calendarView.adjustsBoundingRectWhenChangingMonths = true
     }
 
@@ -356,8 +366,6 @@ extension AdminCalViewController {
     }
 }
 
-// MARK: - UIImage Extension
-
-#Preview("CalendarView") {
-    AdminCalView()
+#Preview {
+    TargetCalView()
 }

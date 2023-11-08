@@ -65,6 +65,7 @@
 		8E7EB36D2AF60AF900D07E25 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E7EB36C2AF60AF900D07E25 /* SnapKit */; };
 		8E7EB36F2AF60AF900D07E25 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8E7EB36E2AF60AF900D07E25 /* SnapKit-Dynamic */; };
 		8E7EB3712AFB2DA200D07E25 /* AdminCalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EB3702AFB2DA200D07E25 /* AdminCalViewController.swift */; };
+		8E7EB3732AFBE98400D07E25 /* TargetCalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EB3722AFBE98400D07E25 /* TargetCalViewController.swift */; };
 		DE76976B2AF252DE00AE4FA9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE76976A2AF252DE00AE4FA9 /* OnboardingView.swift */; };
 		DE76976E2AF252FF00AE4FA9 /* TargetMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE76976D2AF252FF00AE4FA9 /* TargetMainView.swift */; };
 		DE7697722AF2538E00AE4FA9 /* AdminMngView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697712AF2538E00AE4FA9 /* AdminMngView.swift */; };
@@ -116,6 +117,7 @@
 		8E7EB3612AF5F21800D07E25 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		8E7EB3662AF5F28A00D07E25 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		8E7EB3702AFB2DA200D07E25 /* AdminCalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCalViewController.swift; sourceTree = "<group>"; };
+		8E7EB3722AFBE98400D07E25 /* TargetCalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetCalViewController.swift; sourceTree = "<group>"; };
 		DE76976A2AF252DE00AE4FA9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DE76976D2AF252FF00AE4FA9 /* TargetMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetMainView.swift; sourceTree = "<group>"; };
 		DE7697712AF2538E00AE4FA9 /* AdminMngView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMngView.swift; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				DE76977D2AF253F800AE4FA9 /* SympView.swift */,
 				DE76977F2AF253FD00AE4FA9 /* TargetCalView.swift */,
 				DE7697812AF2540500AE4FA9 /* DailyEditView.swift */,
+				8E7EB3722AFBE98400D07E25 /* TargetCalViewController.swift */,
 			);
 			path = TargetViews;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				DE76978A2AF2554500AE4FA9 /* AdminMainView.swift in Sources */,
 				DE7697922AF255C000AE4FA9 /* AdminSpecificHistoryModalView.swift in Sources */,
 				7D5376072AE0166200D338D5 /* EditView.swift in Sources */,
+				8E7EB3732AFBE98400D07E25 /* TargetCalViewController.swift in Sources */,
 				DE7697942AF255CC00AE4FA9 /* AdminTagMemoView.swift in Sources */,
 				8E7EB3602AF4972600D07E25 /* GestureModifier.swift in Sources */,
 				DE7697902AF255AC00AE4FA9 /* AdminSpecificView.swift in Sources */,
