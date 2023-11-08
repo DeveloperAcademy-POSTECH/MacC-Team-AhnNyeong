@@ -64,6 +64,7 @@
 		8E7EB36A2AF60A3700D07E25 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 8E7EB3692AF60A3700D07E25 /* Then */; };
 		8E7EB36D2AF60AF900D07E25 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8E7EB36C2AF60AF900D07E25 /* SnapKit */; };
 		8E7EB36F2AF60AF900D07E25 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 8E7EB36E2AF60AF900D07E25 /* SnapKit-Dynamic */; };
+		8E7EB3712AFB2DA200D07E25 /* AdminCalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E7EB3702AFB2DA200D07E25 /* AdminCalViewController.swift */; };
 		DE76976B2AF252DE00AE4FA9 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE76976A2AF252DE00AE4FA9 /* OnboardingView.swift */; };
 		DE76976E2AF252FF00AE4FA9 /* TargetMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE76976D2AF252FF00AE4FA9 /* TargetMainView.swift */; };
 		DE7697722AF2538E00AE4FA9 /* AdminMngView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7697712AF2538E00AE4FA9 /* AdminMngView.swift */; };
@@ -114,6 +115,7 @@
 		8E7EB35F2AF4972600D07E25 /* GestureModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureModifier.swift; sourceTree = "<group>"; };
 		8E7EB3612AF5F21800D07E25 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		8E7EB3662AF5F28A00D07E25 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		8E7EB3702AFB2DA200D07E25 /* AdminCalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminCalViewController.swift; sourceTree = "<group>"; };
 		DE76976A2AF252DE00AE4FA9 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DE76976D2AF252FF00AE4FA9 /* TargetMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetMainView.swift; sourceTree = "<group>"; };
 		DE7697712AF2538E00AE4FA9 /* AdminMngView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminMngView.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 				DE7697932AF255CC00AE4FA9 /* AdminTagMemoView.swift */,
 				DE7697952AF2560100AE4FA9 /* AdminNewCardView.swift */,
 				DE7697972AF2560900AE4FA9 /* AdminMMSView.swift */,
+				8E7EB3702AFB2DA200D07E25 /* AdminCalViewController.swift */,
 			);
 			path = AdminViews;
 			sourceTree = "<group>";
@@ -513,6 +516,7 @@
 				8E7EB3582AF3B93800D07E25 /* OutCheckView.swift in Sources */,
 				DE7697762AF253BE00AE4FA9 /* LogInCompView.swift in Sources */,
 				DE7697962AF2560100AE4FA9 /* AdminNewCardView.swift in Sources */,
+				8E7EB3712AFB2DA200D07E25 /* AdminCalViewController.swift in Sources */,
 				DE7697742AF253AE00AE4FA9 /* LogInView.swift in Sources */,
 				7D0A95222ADC30B500F6836D /* ImperMainView.swift in Sources */,
 				8E1DB0AE2AE4F522008DAD0F /* LoginTypeView.swift in Sources */,

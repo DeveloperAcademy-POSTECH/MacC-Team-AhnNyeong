@@ -17,10 +17,10 @@ class CalendarViewController: UIViewController, FSCalendarDelegate {
     let black75 = UIColor(red: 171/255, green: 171/255, blue: 171/255, alpha: 1)    // black75
     let white50 = UIColor(red: 255/255, green: 255/255, blue: 254/255, alpha: 1)    // white50
     let calmint = UIColor(red: 32/255, green: 211/255, blue: 211/255, alpha: 1) // cal_weekend
-    let calyellow = UIColor(red: 255/255, green: 236/255, blue: 165/255, alpha: 1)  // calToday
+    let calyellow = UIColor(red: 255/255, green: 236/255, blue: 165/255, alpha: 1)  // cal_today
 
-    var eventsArray = [Date]()  // 이벤트(예정)
-    var eventsArrayDone = [Date]()  // 이벤트(완료)
+    var eventsArray = [Date]()  // 이벤트(예정) <- firebase에서 가져온 또는 예정일 배열
+    var eventsArrayDone = [Date]()  // 이벤트(완료) <- firebase에서 가져온 생리 기록 존재일 배열
 
     var isWeekly = true
 
@@ -187,13 +187,13 @@ extension CalendarViewController: FSCalendarDataSource, FSCalendarDelegateAppear
             calendarView.appearance.titleTodayColor = black500
         }
 
-        // 칸 배경색
+        // 셀 배경색
         let selectedColor = CGColor(red: 255/255, green: 236/255, blue: 165/255, alpha: 1)
         let todayColor = CGColor(red: 255/255, green: 236/255, blue: 165/255, alpha: 0.5)
-        if date == calendarView.today {
-            cell.layer.backgroundColor = todayColor
-        } else if date == calendarView.selectedDate {
+        if date == calendarView.selectedDate {
             cell.layer.backgroundColor = selectedColor
+        } else if date == calendarView.today {
+            cell.layer.backgroundColor = todayColor
         } else {
             cell.layer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 0)
         }
@@ -221,9 +221,11 @@ extension CalendarViewController: FSCalendarDataSource, FSCalendarDelegateAppear
         }
          */
 
+        /**/
         // 관리자용 물방울 & 이벤트 수량 라벨 이미지
         if (self.eventsArray.contains(date) || self.eventsArrayDone.contains(date)) {
-            let cellImageView = UIImageView(image: UIImage(systemName: iconName))
+//            let cellImageView = UIImageView(image: UIImage(systemName: iconName))
+            let cellImageView = UIImageView(image: UIImage(named: "CalDrop"))
             cellImageView.tintColor = coral500
             cellImageView.translatesAutoresizingMaskIntoConstraints = true
             let cellImageLable = UILabel().then { [weak self] in
@@ -239,6 +241,8 @@ extension CalendarViewController: FSCalendarDataSource, FSCalendarDelegateAppear
                 $0.centerY.equalTo(cell.snp.centerY).offset(12.0) // 숫자 레이블 위치 조정
                 $0.width.equalTo(32)
                 $0.height.equalTo(43)
+//                $0.width.equalTo(cell.bounds.width)
+//                $0.height.equalTo(cell.bounds.height)
             }
             cellImageLable.snp.makeConstraints {
                 $0.centerX.equalToSuperview()
@@ -251,6 +255,7 @@ extension CalendarViewController: FSCalendarDataSource, FSCalendarDelegateAppear
                 }
             }
         }
+        /**/
     }
 
     // 이벤트 기본 색상
@@ -260,7 +265,7 @@ extension CalendarViewController: FSCalendarDataSource, FSCalendarDelegateAppear
 
     // 이벤트 표시 갯수
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        if (self.eventsArray.contains(date) || self.eventsArrayDone.contains(date)) {
+        if self.eventsArray.contains(date) || self.eventsArrayDone.contains(date) {
             return 1
         } else {
             return 0
@@ -454,6 +459,7 @@ extension CalendarViewController {
     }
 }
 
+/*
 // MARK: - UIImage Extension
 extension UIImage {
     func resize(newWidth: CGFloat) -> UIImage {
@@ -495,6 +501,7 @@ extension CALayer {
         }
     }
 }
+*/
 
 #Preview("CalendarView") {
     AdminCalView()

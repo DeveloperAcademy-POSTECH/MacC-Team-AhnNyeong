@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CalendarView: UIViewControllerRepresentable {
-    typealias UIViewControllerType = CalendarViewController
+    typealias UIViewControllerType = AdminCalViewController
 
-    func makeUIViewController(context: Context) -> CalendarViewController {
-        return CalendarViewController()
+    func makeUIViewController(context: Context) -> AdminCalViewController {
+        return AdminCalViewController()
     }
 
-    func updateUIViewController(_ uiViewController: CalendarViewController, context: Context) {
+    func updateUIViewController(_ uiViewController: AdminCalViewController, context: Context) {
         // 업데이트가 필요한 경우 여기에 코드를 추가합니다.
     }
 }
