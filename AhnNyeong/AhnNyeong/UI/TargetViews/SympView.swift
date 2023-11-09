@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-struct DeviceSize {
-    static let iPhoneSE: CGFloat = 375
-    static let iPhone14: CGFloat = 390
-    static let iPhone14Pro: CGFloat = 393
-    static let iPhone14ProMax: CGFloat = 430
-    static let width: CGFloat = UIScreen.main.bounds.size.width
-}
-
 struct SympView: View {
     @StateObject var mensInfoStore: MensInfoStore = MensInfoStore()
     @State var mensSympSelected = 0

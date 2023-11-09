@@ -54,6 +54,7 @@
 		7D53763B2AE01D6C00D338D5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 7D53763A2AE01D6C00D338D5 /* FirebaseStorage */; };
 		7D53763D2AE01D6C00D338D5 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 7D53763C2AE01D6C00D338D5 /* FirebaseStorageCombine-Community */; };
 		7D9115ED2AF787E0000A84AA /* MensStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D9115EC2AF787E0000A84AA /* MensStatusView.swift */; };
+		7DADB05D2AFC5C1B00A6846B /* DeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DADB05C2AFC5C1B00A6846B /* DeviceSize.swift */; };
 		7DDB73E32AF7E3D400F66F00 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 7DDB73E22AF7E3D400F66F00 /* Lottie */; };
 		7DDB73E92AF7E62A00F66F00 /* Confetti_01.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DDB73E82AF7E62A00F66F00 /* Confetti_01.json */; };
 		7DDB73EB2AF7E63000F66F00 /* Confetti_02.json in Resources */ = {isa = PBXBuildFile; fileRef = 7DDB73EA2AF7E63000F66F00 /* Confetti_02.json */; };
@@ -109,6 +110,7 @@
 		7D5376002ADD7C4E00D338D5 /* MensInfoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensInfoStore.swift; sourceTree = "<group>"; };
 		7D5376062AE0166200D338D5 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		7D9115EC2AF787E0000A84AA /* MensStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MensStatusView.swift; sourceTree = "<group>"; };
+		7DADB05C2AFC5C1B00A6846B /* DeviceSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSize.swift; sourceTree = "<group>"; };
 		7DDB73E82AF7E62A00F66F00 /* Confetti_01.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Confetti_01.json; path = "../../../../../../Downloads/Confetti-2/Confetti_01.json"; sourceTree = "<group>"; };
 		7DDB73EA2AF7E63000F66F00 /* Confetti_02.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Confetti_02.json; path = "../../../../../../Downloads/Confetti-2/Confetti_02.json"; sourceTree = "<group>"; };
 		7DF11C232AB03D8E005C0AE3 /* AhnNyeong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AhnNyeong.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,6 +248,7 @@
 				7DF11C2C2AB03D8F005C0AE3 /* Preview Content */,
 				7D5020CD2AF23591004B6312 /* TextModifier.swift */,
 				8E7EB35F2AF4972600D07E25 /* GestureModifier.swift */,
+				7DADB05C2AFC5C1B00A6846B /* DeviceSize.swift */,
 			);
 			path = AhnNyeong;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DADB05D2AFC5C1B00A6846B /* DeviceSize.swift in Sources */,
 				7D5375FF2ADD63DF00D338D5 /* MensInfo.swift in Sources */,
 				DEEBFF012AE4FD8D005098E3 /* ManagerViewForMVP.swift in Sources */,
 				7DF11C292AB03D8E005C0AE3 /* ContentView.swift in Sources */,

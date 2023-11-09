@@ -2,17 +2,15 @@
 //  DeviceSize.swift
 //  AhnNyeong
 //
-//  Created by jaelyung kim on 11/8/23.
+//  Created by jaelyung kim on 11/9/23.
 //
 
 import SwiftUI
 
-struct DeviceSize: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    DeviceSize()
+struct DeviceSize {
+    static let iPhoneSE: CGFloat = 375
+    static let iPhone14: CGFloat = 390
+    static let iPhone14Pro: CGFloat = 393
+    static let iPhone14ProMax: CGFloat = 430
+    static let width: CGFloat = UIScreen.main.bounds.size.width
 }
